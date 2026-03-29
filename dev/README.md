@@ -47,7 +47,7 @@ A developer modifys manually `fw_tmp.asm` to customize the firmware. Use `dev/ma
 
 ```
 cd dev
-python make_diff.py ..\firmware\fw_fmt.asm ..\firmware\fw_tmp.asm ..\template\diff.json ..\template\comment
+python make_diff.py ..\firmware\fw_fmt.asm ..\firmware\fw_tmp.asm ..\template\diff.json ..\template\comments.txt
 ```
 
 ## Placeholder format

@@ -171,7 +171,7 @@ def assemble-release [
     }
 
     cd $workdir
-    ^zip -r "$archive_path" .
+    ^zip -r $archive_path .
 
     if ($archive_path | path exists) == false {
         error make { msg: $"ZIP compression failed: ($archive_path)" }

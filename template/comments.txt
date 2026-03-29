@@ -1183,6 +1183,10 @@
 ;; <NOP> <- CURRENTLY NOT USED
 ;; <NOP> <- CURRENTLY NOT USED
 ;; <NOP> <- CURRENTLY NOT USED
+;; <NOP> <- CURRENTLY NOT USED
+;; <NOP> <- CURRENTLY NOT USED
+;; <NOP> <- CURRENTLY NOT USED
+;; <NOP> <- CURRENTLY NOT USED
 
 
 ;; Load 8-bit mask | ROM-Loading POINT (2) >>>
@@ -2392,20 +2396,23 @@
 
 ;
 ; what flag?
-;
-;
-; If 0x12.6 == 0, skip
-; [Middle-button 1] Write No operation to disable the auto-scrolling
-;
-;
-; [RETURN POINT FROM TRACKPOINT PROCESS]
+; only apply speed factor if !middle_button_pressed (i.e. scrolling)
+; Call iic_stop 
+;;; If 0x12.6 (flag_middle_button_pressed) == 0, skip
+;;; [Middle-button 1] Write No operation to disable the auto-scrolling (tp_skip_apply_speed)
+;;; NOP                           ;;; Enable to modify middle button scrolling 
+;;; NOP                           ;;; Enable to modify middle button scrolling
+; tp_apply_speed_x
+; tp_apply_speed_y
+; [RETURN POINT FROM TRACKPOINT PROCESS] copy_clamp_tp_mouse_pos ; tp_mouse_d? -> mouse_d?
 ;; [ tp speed++ ] x2
 ;; [ tp speed++ ] x3
 ;; [ tp speed++ ] x4
 ;; [ tp speed++ ] x5
 
 ; Related to the auto-scrolling
-; [Middle-button 2] Write No operation to disable the auto-scrolling
+;;; [Middle-button 2] Write No operation to disable the auto-scrolling
+;;; BSET         0x14.6           ;;; Enable to modify middle button scrolling. Middle button is reported.
 ; RETURN to POINT A
 ; 32points
 ; 0x34 <= 0x32
@@ -2507,7 +2514,6 @@
 ;
 ;
 ;
-; DW | 0x0e00 | .. | unreachable?
 
 ;
 ; 32points
@@ -2541,7 +2547,6 @@
 ;
 ;
 ;
-; DW | 0x0e00 | .. | unreachable?
 
 ;
 ;
@@ -2585,7 +2590,6 @@
 ;
 ;
 ;
-; DW | 0x0e00 | .. | unreachable?
 
 ;
 ; 33points
@@ -2618,20 +2622,21 @@
 ;
 ;
 ;
-; DW | 0x0e00 | .. | unreachable?
 
 ;
-;
-;
-;
-;
-;
-;
-; Auto-scroll flag
-; [Middle-button 3] Write No operation to disable the auto-scrolling
-;
-;
-;
+; clear mouse_buttons.0 (left button)
+; check tp_mouse_buttons.0 (tp left button)
+; If 0, set mouse_buttons.0 (left button)
+; clear mouse_buttons.1 (right button)
+; check tp_mouse_buttons.1 (tp right button)
+; IF 0, set mouse_buttons.1 (right button)
+;;; Check Auto-scroll flag (flag_Thinkpad_preferred_scrolling)
+;;; [Middle-button 3] Write No operation to disable the auto-scrolling
+;;; NOP                           ;;; Enable to modify middle button scrolling
+;;; NOP                           ;;; Enable to modify middle button scrolling
+; clear mouse_buttons.2 
+; check tp_mouse_buttons.2 (tp middle button)
+; set mouse_buttons.2 (middle button)
 ; Related to the auto-scrolling
 ;
 ; if 0x2d != 0x2c
@@ -2647,13 +2652,14 @@
 ; Auto-scroll flag
 ; 
 ; Clear 0x12.6
-; 
+;             0x2c: mouse_buttons? (0: left, 1: right, 2: middle)
 ; If 0x2c.2 == 1, set 0x12.6 (May be middle button pressed trigger?)
 ;
 
 ;
-; 0x2c.2 = 0
-; 
+; 0x2c.2 = 0  0x2c: mouse_buttons (0: left, 1: right, 2: middle)   
+;;; NOP                           ;;; Enable to modify middle button scrolling
+;             0x45: tp_mouse_buttons
 ; Set 1 to the 3rd bit of the value of 0x45 (#0x04 = 0000100)
 ; 
 ; 
@@ -3564,7 +3570,7 @@
 ;
 
 ;
-; memoOVC, Y = ?, Z = ? (may be v-c)
+; memoOVC, Y = ?, Z = ? (may be v-c)  | ROM-Loading POINT (11) >>>
 ; write UDR0 ? at UDP0 ?
 ;
 ; UDP0 += 1
@@ -3600,8 +3606,8 @@
 ;
 ; set UDP0 = A
 ;
-; DW | 0x13a3 | .. |
-; DW | 0x0e00 | .. |
+; | .. | unreachable?
+; | .. | unreachable?
 
 ;
 ;
@@ -6092,7 +6098,7 @@
 ;
 ;
 ; Z = #0xff (Real: + 0x05a0 = 0x2d9f)
-; memoOVC at Y const 27, Z const ff
+; memoOVC at Y const 27, Z const ff  | ROM-Loading POINT (12) >>>
 ;
 ;
 ;
@@ -6489,7 +6495,7 @@
 ;
 ;
 ;
-; memoOVC at Y v-c, Z v-c,
+; memoOVC at Y v-c, Z v-c,   | ROM-Loading POINT (13) >>>
 ; write UDR0_W ? at UDP ?
 ;
 ;
@@ -6514,7 +6520,7 @@
 ;
 
 ;
-; memoOVC, Y = ?, Z = ? 
+; memoOVC, Y = ?, Z = ?    | ROM-Loading POINT (14) >>>
 ; write UDR0_W ? at UDP ?
 ;
 ;
@@ -7078,13 +7084,13 @@
 ;
 ;
 ; (Real: + 0x05a0 = 0x2E2C) 
-; memoOVC, Y = const 28, Z = const 8c
+; memoOVC, Y = const 28, Z = const 8c | ROM-Loading POINT (15) >>>
 ;
 ;
 ;
 ;
 ;
-; memoOVC, Y = c-v 28 + g, Z = c-v 8c + g.
+; memoOVC, Y = c-v 28 + g, Z = c-v 8c + g. | ROM-Loading POINT (16) >>>
 ;
 ;
 ;
@@ -7105,13 +7111,13 @@
 ;
 ;
 ;
-; memoOVC at Y = const 28, Z = const 8e
+; memoOVC at Y = const 28, Z = const 8e | ROM-Loading POINT (17) >>>
 ;
 ;
 ;
 ;
 ;
-; memoOVC at Y = c-v 28 + g, Z = c-v 8e + g
+; memoOVC at Y = c-v 28 + g, Z = c-v 8e + g | ROM-Loading POINT (18) >>>
 ; 48point
 ;
 ;
@@ -7202,7 +7208,7 @@
 ;
 ;
 ;
-; memoOVC at Y = const 00, Z = const 00.
+; memoOVC at Y = const 00, Z = const 00. | ROM-Loading POINT (19) >>>
 ;
 ;
 ;
@@ -7294,7 +7300,7 @@
 ;
 ;
 ;
-; memoOVC, LOOP, start from Y const 00, Z const 00.
+; memoOVC, LOOP, start from Y const 00, Z const 00. | ROM-Loading POINT (20) >>>
 ;
 ;
 ;
@@ -7401,7 +7407,7 @@
 ; Y = 0x2f                           |
 ;                                    |
 ; Z = 0x30                           |
-; memoOVC, loop Y v, Z v             |
+; memoOVC, loop Y v, Z v             | ROM-Loading POINT (21) >>>
 ;                                    |
 ;                                    |
 ; 0x38 = Low bit, 0x39 = High bit    |
@@ -7484,13 +7490,13 @@
 ;
 ;
 ;
-; memoOVC, Y = const 2f or 2f, Z = const fc or fe.
+; memoOVC, Y = const 2f or 2f, Z = const fc or fe. | ROM-Loading POINT (22) >>>
 ;
 ;
 ;
 ;
 ;
-; memoOVC, Y = const 2f or 2f. Z = const fc + 1 or fe + 1.
+; memoOVC, Y = const 2f or 2f. Z = const fc + 1 or fe + 1. | ROM-Loading POINT (23) >>>
 ;
 ;
 ;

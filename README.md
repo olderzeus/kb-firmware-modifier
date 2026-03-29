@@ -120,6 +120,7 @@ See https://github.com/haborite/ku1255-firmware-modifier/tree/main/dev#readme
 # Acknowledgements
 The firmware binary analysis methodology employed in this project is based on the discussion in the following thread
 - https://github.com/lentinj/tp-compact-keyboard/issues/32
+- https://hohlerde.org/rauch/en/elektronik/projekte/tpkbd-fix
 
 The reffered table of Usage IDs and names
 - https://bsakatu.net/doc/usb-hid-to-scancode/
