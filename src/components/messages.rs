@@ -6,7 +6,7 @@ pub fn ErrorMessage(msg: String, error_msg: Signal<Option<String>>) -> Element {
         div { class: "fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50",
             div { 
                 class: "bg-red-100 border border-red-400 text-red-700 px-6 py-4 rounded-xl shadow-lg max-w-md w-full relative",
-                strong { class: "text-lg font-semibold", "Error" }
+                strong { class: "text-lg", "Error" }
                 p {
                     class: "mt-2",
                     { msg }

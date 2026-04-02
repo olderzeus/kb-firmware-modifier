@@ -7,7 +7,7 @@ pub fn SliderTPSensitivity(
     rsx! (
         div {
             class: "w-full max-w-md mx-auto p-6 space-y-6",
-            h2 { class: "text-xl font-bold text-center", "TrackPoint Speed" },
+            h2 { class: "text-xl text-center", "TrackPoint Speed" },
             div {
                 class: "flex items-center justify-center space-x-8",
                 div {

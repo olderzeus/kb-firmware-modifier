@@ -18,9 +18,9 @@ pub fn MediaKeySetting(
                     let label = format!("Media {:02}", trigger_key_id - 212);
                     rsx!(
                         div {
-                            class: "flex gap-4 py-2",
+                            class: "flex gap-4 px-4 py-2",
                             span {
-                                class: "text-sm font-semibold text-right whitespace-nowrap",
+                                class: "text-right whitespace-nowrap",
                                 {label}
                             },
                             SelectMediaKeyID {

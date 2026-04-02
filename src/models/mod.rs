@@ -148,3 +148,13 @@ impl MacroKey {
         }
     }
 }
+
+#[derive(Clone, Copy, PartialEq, Eq, Serialize, Deserialize, Debug)]
+pub enum Tab {
+    Keyboard,
+    MacroKey,
+    MediaKey,
+    Trackpoint,
+    KeyMatrix,
+    Others,
+}

@@ -14,6 +14,7 @@ use components::{
     ButtonInstall,
     ButtonLoad,
     ButtonSave,
+    ButtonTab,
     ErrorMessage,
     Keyboard,
     SliderTPSensitivity,
@@ -21,6 +22,9 @@ use components::{
     MacroKeySetting,
     MediaKeySetting,
 };
+
+
+
 
 use models::{
     Board, LogicalLayout, GeneralSeitting, MacroKey, 
@@ -104,32 +108,30 @@ pub fn MainWindow(
     let media_key_map: Signal<BTreeMap<u8, u16>> = use_signal(default_media_key_map);
     let mut enable_middle_click: Signal<bool> = use_signal(default_enable_middle_click);
 
+    // UI switch
+    let current_tab = use_signal(|| models::Tab::Keyboard);
+
     rsx! {
         if let Some(msg) = error_msg() {
             ErrorMessage { msg, error_msg }
         }
 
         div { class: "min-h-screen bg-gray-600 text-slate-100",
+
             div { class: "mx-auto w-full p-4 space-y-4",
 
-                div { class: "w-full bg-gray-800 p-4 rounded shadow flex flex-wrap items-end gap-4",
-                    div { class: "flex flex-wrap items-center gap-2",
-                        label { class: "text-sm text-gray-200", "Keyboard" }
-                        SelectBoard {
-                            general_setting: general_setting.clone(),
-                            selected_board_name,
-                            selected_logical_layout_name,
-                            selected_board,
-                        }
-                        label { class: "text-sm text-gray-200", "Language" }
-                        SelectLogicalLayout {
-                            general_setting: general_setting.clone(),
-                            selected_logical_layout_name,
-                            selected_logical_layout,
-                        }
-                    }
-                    div { class: "flex items-center gap-2 ml-auto",
-                        ButtonCopyLayer { id_layout_l0, id_layout_l1 }
+                div { class: "flex gap-4 min-h-screen w-full",
+
+                    // Left side bar
+                    div { class: "w-min bg-gray-900 p-4 rounded shadow flex flex-col gap-4",
+                        hr {}
+                        ButtonTab { tabname: "⌨ Key mapping", tabkind: models::Tab::Keyboard, current_tab },
+                        ButtonTab { tabname: "⚙ Macro keys", tabkind: models::Tab::MacroKey, current_tab },
+                        ButtonTab { tabname: "⚙ Media keys", tabkind: models::Tab::MediaKey, current_tab },
+                        ButtonTab { tabname: "⚙ Trackpoint", tabkind: models::Tab::Trackpoint, current_tab },
+                        ButtonTab { tabname: "⚙ Key matrix", tabkind: models::Tab::KeyMatrix, current_tab }
+                        ButtonTab { tabname: "⚙ Other settings", tabkind: models::Tab::Others, current_tab }
+                        hr {}
                         ButtonLoad {
                             selected_board_name,
                             selected_logical_layout_name,
@@ -165,84 +167,113 @@ pub fn MainWindow(
                             error_msg,
                         }
                     }
-                }
 
-                div { class: "flex gap-4",
-                    div { class: "bg-black rounded flex flex-col",
-                        Keyboard {
-                            general_setting: general_setting.clone(),
-                            layer_number: 0,
-                            board: selected_board().clone(),
-                            logical_layout: selected_logical_layout().clone(),
-                            id_layout_l0,
-                            id_layout_l1,
-                        }
-                        Keyboard {
-                            general_setting: general_setting.clone(),
-                            layer_number: 1,
-                            board: selected_board().clone(),
-                            logical_layout: selected_logical_layout().clone(),
-                            id_layout_l0,
-                            id_layout_l1,
-                        }
-                    }
-                    div { class: "flex flex-col gap-4",
-                        div { class: "flex gap-4",
-                            div { class: "bg-black rounded flex flex-1",
-                                SliderTPSensitivity { tp_sensitivity }
+                    // Wrapper 
+                    div { class: "gap-4 space-y-4 w-full min-h-screen",
+
+                        // Board and Language select bar
+                        div { class: "w-full bg-gray-900 p-4 rounded shadow flex flex-wrap items-end gap-4",
+                            div { class: "flex flex-wrap items-center gap-4",
+                                label { class: "text-gray-200", "Keyboard:" }
+                                SelectBoard {
+                                    general_setting: general_setting.clone(),
+                                    selected_board_name,
+                                    selected_logical_layout_name,
+                                    selected_board,
+                                }
+                                div { class: "w-4" }
+                                label { class: "text-gray-200", "Language:" }
+                                SelectLogicalLayout {
+                                    general_setting: general_setting.clone(),
+                                    selected_logical_layout_name,
+                                    selected_logical_layout,
+                                }
                             }
-                            div { class: "bg-black rounded flex flex-1",
-                                div { class: "w-full p-6 space-y-6",
-                                    h2 { class: "text-xl font-bold text-center flex-wrap",
-                                        "Enable middle"
-                                        br {}
-                                        "button click"
-                                    }
-                                    div { class: "flex justify-center",
-                                        input {
-                                            r#type: "checkbox",
-                                            checked: enable_middle_click(),
-                                            onchange: move |evt| {
-                                                enable_middle_click.set(evt.checked());
-                                            },
+                        }
+                        
+                        // Main content
+                        div { class: "bg-gray-900 rounded flex flex-col p-4 min-h-screen gap-4 overflow-auto",
+                            { match current_tab() {
+                                    models::Tab::Keyboard => {
+                                        rsx! {
+                                            Keyboard {
+                                                general_setting: general_setting.clone(),
+                                                layer_number: 0,
+                                                board: selected_board().clone(),
+                                                logical_layout: selected_logical_layout().clone(),
+                                                id_layout_l0,
+                                                id_layout_l1,
+                                            }
+                                            Keyboard {
+                                                general_setting: general_setting.clone(),
+                                                layer_number: 1,
+                                                board: selected_board().clone(),
+                                                logical_layout: selected_logical_layout().clone(),
+                                                id_layout_l0,
+                                                id_layout_l1,
+                                            }
+                                            div { class: "flex items-center px-4",
+                                                ButtonCopyLayer { id_layout_l0, id_layout_l1 }
+                                            }
+                                        }                                        
+                                    },
+                                    models::Tab::MacroKey => {
+                                        rsx!{
+                                            // div { class: "px-6 overflow-y-auto",
+                                                MacroKeySetting {
+                                                    general_setting: general_setting.clone(),
+                                                    map_key_label: selected_logical_layout().map_key_label.clone(),
+                                                    macro_key_map: macro_key_map.clone(),
+                                                }
+                                            // }
+                                        }
+                                    },
+                                    models::Tab::MediaKey => {
+                                        rsx!{
+                                            // div { class: "px-6 overflow-y-auto",
+                                                MediaKeySetting {
+                                                    general_setting: general_setting.clone(),
+                                                    media_key_map: media_key_map.clone(),
+                                                }
+                                            // }
+                                        }
+                                    },
+                                    models::Tab::Trackpoint => {
+                                        rsx!{
+                                            SliderTPSensitivity { tp_sensitivity }
+                                        }
+                                    },
+                                    models::Tab::KeyMatrix => {rsx!{}},
+                                    models::Tab::Others => {
+                                        rsx!{
+                                            SelectFnID {
+                                                general_setting: general_setting.clone(),
+                                                fn_id,
+                                                map_key_label: selected_logical_layout().map_key_label.clone(),
+                                            }
+                                            div { class: "w-full p-6 space-y-6",
+                                                h2 { class: "text-xl text-center flex-wrap",
+                                                    "Enable middle"
+                                                    br {}
+                                                    "button click"
+                                                }
+                                                div { class: "flex justify-center",
+                                                    input {
+                                                        r#type: "checkbox",
+                                                        checked: enable_middle_click(),
+                                                        onchange: move |evt| {
+                                                            enable_middle_click.set(evt.checked());
+                                                        },
+                                                    }
+                                                }
+                                            }
                                         }
                                     }
                                 }
                             }
                         }
-                        div { class: "flex flex-col bg-black rounded max-h-[calc(100vh-282px)]",
-                            h2 { class: "text-xl font-bold text-center py-2", "Macro keys" }
-                            div { class: "px-6 overflow-y-auto",
-                                MacroKeySetting {
-                                    general_setting: general_setting.clone(),
-                                    map_key_label: selected_logical_layout().map_key_label.clone(),
-                                    macro_key_map: macro_key_map.clone(),
-                                }
-                            }
-                        }
-                    }
-                    div { class: "flex flex-col gap-4",
-                        div { class: "px-6 bg-black rounded pb-6",
-                            SelectFnID {
-                                general_setting: general_setting.clone(),
-                                fn_id,
-                                map_key_label: selected_logical_layout().map_key_label.clone(),
-                            }
-                        }
-                        div { class: "flex flex-col bg-black rounded max-h-[calc(100vh-220px)]",
-                            h2 { class: "text-xl font-bold text-center py-2", "Media keys" }
-                            div { class: "px-6 overflow-y-auto",
-                                MediaKeySetting {
-                                    general_setting: general_setting.clone(),
-                                    media_key_map: media_key_map.clone(),
-                                }
-                            }
-                        }
                     }
                 }
-                        // div { class: "w-full bg-gray-800 p-4 rounded shadow flex flex-wrap items-end gap-4",
-            //     h2 { class: "text-xl font-bold text-center py-2", "Key matrix" },
-            // }
             }
         }
     }

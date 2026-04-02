@@ -1,7 +1,7 @@
 use dioxus::prelude::*;
 use std::collections::BTreeMap;
 use rfd::FileDialog;
-use crate::models::{MacroKey, Board, LogicalLayout};
+use crate::models::{MacroKey, Board, LogicalLayout, Tab};
 use crate::utils::{
     install_firmware_by_flashsn8,
     load_config,
@@ -39,7 +39,7 @@ pub fn ButtonInstall(
 ) -> Element {
     rsx! {
         button {
-            class: "px-4 py-2 bg-blue-500 text-white rounded shadow hover:bg-blue-600",
+            class: "px-4 py-2 bg-gray-800 text-white rounded shadow hover:bg-gray-700 border border-white",
             onclick: move |_| {
                 install_firmware_by_flashsn8(
                     id_layout_l0,
@@ -74,7 +74,7 @@ pub fn ButtonLoad(
 ) -> Element {
     rsx! {
         button {
-            class: "px-4 py-2 bg-green-500 text-white rounded shadow hover:bg-green-600",
+            class: "px-4 py-2 bg-gray-800 text-white rounded shadow hover:bg-gray-700 border border-white",
             onclick: move |_| {
                 let file = FileDialog::new()
                     .add_filter("Config files", &["json"])
@@ -134,7 +134,7 @@ pub fn ButtonSave(
 ) -> Element {
     rsx! {
         button {
-            class: "px-4 py-2 bg-green-500 text-white rounded shadow hover:bg-green-600",
+            class: "px-4 py-2 bg-gray-800 text-white rounded shadow hover:bg-gray-700 border border-white",
             onclick: move |_| {
                 let save_path = FileDialog::new()
                     .add_filter("JSON files", &["json"])
@@ -164,6 +164,22 @@ pub fn ButtonSave(
                 }
             },
             "Save config"
+        }
+    }
+}
+
+#[component]
+pub fn ButtonTab(
+    tabname: String,
+    tabkind: Tab,
+    current_tab: Signal<Tab>,
+) -> Element {
+    let color = if current_tab() == tabkind { "bg-gray-500 hover:bg-gray-500" } else { "bg-gray-900 hover:bg-gray-700" };
+    rsx! {
+        button {
+            class: format!("whitespace-nowrap text-left px-4 py-2 rounded {color}"),
+            onclick: move |_| current_tab.set(tabkind),
+            {tabname}
         }
     }
 }
