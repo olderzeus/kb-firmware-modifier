@@ -171,8 +171,8 @@ pub struct Config {
     pub layer1: BTreeMap<u8, Option<u8>>, 
     #[serde(default = "default_fn_id")]
     pub fn_id: u8,
-    #[serde(default = "default_tp_sensitivity")]
-    pub tp_sensitivity: u32,
+    #[serde(default = "default_tp_accel_coeffs")]
+    pub trackpoint_speed_settings: TrackPointSpeedSettings,
     #[serde(default = "default_macro_key_map")]
     pub macro_key_map: BTreeMap<u8, MacroKey>, 
     #[serde(default = "default_media_key_map")]

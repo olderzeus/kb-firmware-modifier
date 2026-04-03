@@ -6,12 +6,12 @@ use std::io::{self, BufRead, BufReader, BufWriter};
 use std::path::Path;
 // use serde::{Serialize, Deserialize};
 use serde_json::{to_writer_pretty, from_reader};
-use crate::models::{Config, MacroKey};
+use crate::models::{Config, MacroKey, TrackPointSpeedSettings};
 
 
 
 pub fn load_config(filepath: &Path)
-    -> io::Result<(String, String, BTreeMap<u8, Option<u8>>, BTreeMap<u8, Option<u8>>, u8, u32, BTreeMap<u8, MacroKey>, BTreeMap<u8, u16>, bool)> 
+    -> io::Result<(String, String, BTreeMap<u8, Option<u8>>, BTreeMap<u8, Option<u8>>, u8, TrackPointSpeedSettings, BTreeMap<u8, MacroKey>, BTreeMap<u8, u16>, bool)> 
 {
     let file = File::open(filepath)?;
     let config: Config = from_reader(file)?;
@@ -21,7 +21,7 @@ pub fn load_config(filepath: &Path)
         config.layer0,
         config.layer1,
         config.fn_id,
-        config.tp_sensitivity,
+        config.trackpoint_speed_settings,
         config.macro_key_map,
         config.media_key_map,
         config.enable_middle_click,
@@ -35,7 +35,7 @@ pub fn save_config(
     layer0: &BTreeMap<u8, Option<u8>>,
     layer1: &BTreeMap<u8, Option<u8>>,
     fn_id: u8,
-    tp_sensitivity: u32,
+    trackpoint_speed_settings: TrackPointSpeedSettings,
     macro_key_map: &BTreeMap<u8, MacroKey>,
     media_key_map: &BTreeMap<u8, u16>,
     enable_middle_click: bool,
@@ -47,7 +47,7 @@ pub fn save_config(
         layer0: layer0.clone(),
         layer1: layer1.clone(),
         fn_id,
-        tp_sensitivity,
+        trackpoint_speed_settings,
         macro_key_map: macro_key_map.clone(),
         media_key_map: media_key_map.clone(),
         enable_middle_click,

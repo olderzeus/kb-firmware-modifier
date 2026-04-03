@@ -4,7 +4,7 @@ use std::fs;
 use std::path::{Path};
 use std::io;
 use std::io::{Write};
-use crate::models::{Board, MacroKey};
+use crate::models::{Board, MacroKey, TrackPointSpeedSettings};
 
 use crate::utils::template::render_template_file;
 use crate::utils::diff::apply_diff_files;
@@ -48,7 +48,7 @@ fn build_mod_fw(
     layout0: Signal<BTreeMap<u8, Option<u8>>>,
     layout1: Signal<BTreeMap<u8, Option<u8>>>,
     fn_id: Signal<u8>,
-    tp_sensitivity: Signal<u32>,
+    trackpoint_speed_settings: Signal<TrackPointSpeedSettings>,
     macro_key_map: Signal<BTreeMap<u8, MacroKey>>,
     media_key_map: Signal<BTreeMap<u8, u16>>,
     enable_middle_click: Signal<bool>,
@@ -72,7 +72,7 @@ fn build_mod_fw(
         &layout0(), 
         &layout1(), 
         fn_id(), 
-        tp_sensitivity(), 
+        &trackpoint_speed_settings(), 
         &macro_key_map(), 
         &media_key_map(), 
         enable_middle_click(),
@@ -90,7 +90,7 @@ pub fn install_firmware_by_flashsn8(
     id_layout_l1: Signal<BTreeMap<u8, Option<u8>>>,
     firmware_future: Resource<Vec<u8>>,
     fn_id: Signal<u8>,
-    tp_sensitivity: Signal<u32>,
+    trackpoint_speed_settings: Signal<TrackPointSpeedSettings>,
     macro_key_map: Signal<BTreeMap<u8, MacroKey>>,
     media_key_map: Signal<BTreeMap<u8, u16>>,
     enable_middle_click: Signal<bool>,
@@ -107,7 +107,7 @@ pub fn install_firmware_by_flashsn8(
         id_layout_l0, 
         id_layout_l1, 
         fn_id, 
-        tp_sensitivity, 
+        trackpoint_speed_settings, 
         macro_key_map, 
         media_key_map, 
         enable_middle_click,
@@ -165,7 +165,7 @@ fn modify_asm_file(
     layout0: &BTreeMap<u8, Option<u8>>,
     layout1: &BTreeMap<u8, Option<u8>>,
     fn_id: u8,
-    tp_sensitivity: u32,
+    trackpoint_speed_settings: &TrackPointSpeedSettings,
     macro_key_map: &BTreeMap<u8, MacroKey>,
     media_key_map: &BTreeMap<u8, u16>,
     enable_middle_click: bool,
@@ -195,17 +195,20 @@ fn modify_asm_file(
         }
     }
 
-    // Trackpoint accelaration switches    
-    let accel_switches: [u8; 4] = match tp_sensitivity {
-        2 => [1, 0, 0, 0],
-        3 => [1, 1, 0, 0],
-        4 => [1, 1, 1, 0],
-        5 => [1, 1, 1, 1],
-        _ => [0, 0, 0, 0],
-    };
-    for (i, accel_switch) in accel_switches.into_iter().enumerate() {
-        e_choices.insert(format!("tp_accel_{}", i), accel_switch as usize);
+    // Trackpoint speed settings
+    for (i, coeffs) in trackpoint_speed_settings.coeffs.iter().enumerate() {
+        for (j, coeff) in coeffs.iter().enumerate() {
+            let accelaration_value = coeff - j as i8;
+            let accelaration_value_shifted: u8 = if accelaration_value < 0 {
+                let a = accelaration_value as i16 + 256;
+                a as u8
+            } else {
+                accelaration_value as u8
+            };
+            s_values.insert(format!("tp{:01}_{:02}", i+1, j), format!("0x00{:02x}", accelaration_value_shifted));
+        }
     }
+
 
     // Macro Key
     for (trigger_key_id, macro_key) in macro_key_map.iter() {

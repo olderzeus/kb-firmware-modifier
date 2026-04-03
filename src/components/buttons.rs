@@ -1,7 +1,7 @@
 use dioxus::prelude::*;
 use std::collections::BTreeMap;
 use rfd::FileDialog;
-use crate::models::{MacroKey, Board, LogicalLayout, Tab};
+use crate::models::{MacroKey, Board, LogicalLayout, Tab, TrackPointSpeedSettings};
 use crate::utils::{
     install_firmware_by_flashsn8,
     load_config,
@@ -30,7 +30,7 @@ pub fn ButtonInstall(
     id_layout_l1: Signal<BTreeMap<u8, Option<u8>>>,
     firmware_future: Resource<Vec<u8>>,
     fn_id: Signal<u8>,
-    tp_sensitivity: Signal<u32>,
+    trackpoint_speed_settings: Signal<TrackPointSpeedSettings>,
     macro_key_map: Signal<BTreeMap<u8, MacroKey>>,
     media_key_map: Signal<BTreeMap<u8, u16>>,
     enable_middle_click: Signal<bool>,
@@ -46,7 +46,7 @@ pub fn ButtonInstall(
                     id_layout_l1,
                     firmware_future,
                     fn_id,
-                    tp_sensitivity,
+                    trackpoint_speed_settings,
                     macro_key_map,
                     media_key_map,
                     enable_middle_click,
@@ -67,7 +67,7 @@ pub fn ButtonLoad(
     id_layout_l0: Signal<BTreeMap<u8, Option<u8>>>,
     id_layout_l1: Signal<BTreeMap<u8, Option<u8>>>,
     fn_id: Signal<u8>,
-    tp_sensitivity: Signal<u32>,
+    trackpoint_speed_settings: Signal<TrackPointSpeedSettings>,
     macro_key_map: Signal<BTreeMap<u8, MacroKey>>,
     media_key_map: Signal<BTreeMap<u8, u16>>,
     enable_middle_click: Signal<bool>,
@@ -93,7 +93,7 @@ pub fn ButtonLoad(
                                     loaded_id_layout_l0,
                                     loaded_id_layout_l1,
                                     loaded_fn_id,
-                                    loaded_tp_sensitivity,
+                                    loaded_trackpoint_speed_settings,
                                     loaded_macro_key_map,
                                     loaded_media_key_map,
                                     loaded_enable_middle_click,
@@ -104,7 +104,7 @@ pub fn ButtonLoad(
                                 id_layout_l0.set(loaded_id_layout_l0);
                                 id_layout_l1.set(loaded_id_layout_l1);
                                 fn_id.set(loaded_fn_id);
-                                tp_sensitivity.set(loaded_tp_sensitivity);
+                                trackpoint_speed_settings.set(loaded_trackpoint_speed_settings);
                                 macro_key_map.set(loaded_macro_key_map);
                                 media_key_map.set(loaded_media_key_map);
                                 enable_middle_click.set(loaded_enable_middle_click);
@@ -127,7 +127,7 @@ pub fn ButtonSave(
     id_layout_l0: ReadSignal<BTreeMap<u8, Option<u8>>>,
     id_layout_l1: ReadSignal<BTreeMap<u8, Option<u8>>>,
     fn_id: ReadSignal<u8>,
-    tp_sensitivity: ReadSignal<u32>,
+    trackpoint_speed_settings: ReadSignal<TrackPointSpeedSettings>,
     macro_key_map: ReadSignal<BTreeMap<u8, MacroKey>>,
     media_key_map: ReadSignal<BTreeMap<u8, u16>>,
     enable_middle_click: ReadSignal<bool>,
@@ -154,7 +154,7 @@ pub fn ButtonSave(
                             &id_layout_l0(),
                             &id_layout_l1(),
                             fn_id(),
-                            tp_sensitivity(),
+                            trackpoint_speed_settings(),
                             &macro_key_map(),
                             &media_key_map(),
                             enable_middle_click(),

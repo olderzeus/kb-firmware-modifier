@@ -110,7 +110,7 @@ pub fn MainWindow(
     let macro_key_map: Signal<BTreeMap<u8, MacroKey>> = use_signal(default_macro_key_map);
     let media_key_map: Signal<BTreeMap<u8, u16>> = use_signal(default_media_key_map);
     let mut enable_middle_click: Signal<bool> = use_signal(default_enable_middle_click);
-    let trackpoint_accelaration_coeffs: Signal<models::TrackPointSpeedSettings> = use_signal(default_tp_accel_coeffs);
+    let trackpoint_speed_settings: Signal<models::TrackPointSpeedSettings> = use_signal(default_tp_accel_coeffs);
 
     // UI switch
     let current_tab = use_signal(|| models::Tab::Keyboard);
@@ -142,7 +142,7 @@ pub fn MainWindow(
                             id_layout_l0,
                             id_layout_l1,
                             fn_id,
-                            tp_sensitivity,
+                            trackpoint_speed_settings,
                             macro_key_map,
                             media_key_map,
                             enable_middle_click,
@@ -153,7 +153,7 @@ pub fn MainWindow(
                             id_layout_l0,
                             id_layout_l1,
                             fn_id,
-                            tp_sensitivity,
+                            trackpoint_speed_settings,
                             macro_key_map,
                             media_key_map,
                             enable_middle_click,
@@ -163,7 +163,7 @@ pub fn MainWindow(
                             id_layout_l1,
                             firmware_future,
                             fn_id,
-                            tp_sensitivity,
+                            trackpoint_speed_settings,
                             macro_key_map,
                             media_key_map,
                             enable_middle_click,
@@ -247,16 +247,16 @@ pub fn MainWindow(
                                             div { class: "flex gap-12 px-4",
                                                 div { class: "flex flex-col space-y-2",
                                                     TrackPointSpeedPresetButtons { 
-                                                        tp_data: trackpoint_accelaration_coeffs, 
+                                                        tp_data: trackpoint_speed_settings, 
                                                         default_coeffs: default_tp_accel_coeffs().coeffs.clone()
                                                     }
                                                     TrackPointSpeedChart {
-                                                        tp_data: trackpoint_accelaration_coeffs,
+                                                        tp_data: trackpoint_speed_settings,
                                                     }
                                                 }
                                                 div { class: "flex flex-col space-y-2",
                                                     TrackPointSpeedTableEditor {
-                                                        tp_data: trackpoint_accelaration_coeffs,
+                                                        tp_data: trackpoint_speed_settings,
                                                     }
                                                 }  
                                             }
