@@ -30,7 +30,7 @@ use components::{
 
 use models::{
     Board, LogicalLayout, GeneralSeitting, MacroKey, 
-    default_fn_id, default_tp_sensitivity, default_macro_key_map, default_media_key_map, default_enable_middle_click,
+    default_fn_id, default_macro_key_map, default_media_key_map, default_enable_middle_click,
     default_tp_accel_coeffs
 };
 use utils::{load_url, load_or_download_firmware};
@@ -106,7 +106,6 @@ pub fn MainWindow(
 
     // Other variables
     let fn_id = use_signal(default_fn_id);
-    let tp_sensitivity = use_signal(default_tp_sensitivity);
     let macro_key_map: Signal<BTreeMap<u8, MacroKey>> = use_signal(default_macro_key_map);
     let media_key_map: Signal<BTreeMap<u8, u16>> = use_signal(default_media_key_map);
     let mut enable_middle_click: Signal<bool> = use_signal(default_enable_middle_click);

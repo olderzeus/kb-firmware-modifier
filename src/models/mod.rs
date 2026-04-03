@@ -5,7 +5,6 @@ mod general_setting;
 pub use general_setting::*;
 
 // Default values
-const DEFAULT_TP_SENSITIVITY: u32 = 1;
 const DEFAULT_FN_ID: u8 = 0xaf;
 
 const MACRO_KEY_TRIGGER_IDS: [u8;24] = [
@@ -138,8 +137,6 @@ impl KeyLabel {
 }
 
 pub fn default_fn_id() -> u8 { DEFAULT_FN_ID }
-
-pub fn default_tp_sensitivity() -> u32 { DEFAULT_TP_SENSITIVITY }
 
 
 pub fn default_macro_key_map() -> BTreeMap<u8, MacroKey> {
