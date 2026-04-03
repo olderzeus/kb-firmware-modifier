@@ -17,7 +17,6 @@ use components::{
     ButtonTab,
     ErrorMessage,
     Keyboard,
-    SliderTPSensitivity,
     SelectFnID,
     MacroKeySetting,
     MediaKeySetting,

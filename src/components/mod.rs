@@ -1,6 +1,5 @@
 mod keyboard;
 mod selects;
-mod sliders;
 mod buttons;
 mod popup;
 mod messages;
@@ -10,7 +9,6 @@ mod tp_speed_setting;
 
 pub use keyboard::Keyboard;
 pub use selects::{SelectBoard, SelectLogicalLayout, SelectFnID};
-pub use sliders::SliderTPSensitivity;
 pub use buttons::*;
 pub use popup::Popup;
 pub use messages::ErrorMessage;
