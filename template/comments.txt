@@ -239,7 +239,7 @@
 ;
 ;
 ; Clear FnLock signal
-; Auto-scroll flag
+; Thinkpad preferred scrolling flag (Auto-scroll flag)
 ;
 ;
 ;
@@ -2474,7 +2474,7 @@
 ;
 ;
 ;
-; Auto-scroll flag
+; Thinkpad preferred scrolling flag (Auto-scroll flag)
 ;
 ;
 ; 32points
@@ -2551,7 +2551,7 @@
 ;
 ;
 ;
-; Auto-scroll flag
+; Thinkpad preferred scrolling flag (Auto-scroll flag)
 ;
 ;
 ; 33points
@@ -2579,7 +2579,7 @@
 ;
 ;
 ;
-; Auto-scroll flag
+; Thinkpad preferred scrolling flag (Auto-scroll flag)
 ;
 ;
 ;
@@ -2611,7 +2611,7 @@
 ;
 ;
 ;
-; Auto-scroll flag
+; Thinkpad preferred scrolling flag (Auto-scroll flag)
 ;
 ;
 ;
@@ -2649,7 +2649,7 @@
 ; 0x2d = 0x2c
 ; Set 0x13.2 what flag?
 ;
-; Auto-scroll flag
+; Thinkpad preferred scrolling flag (Auto-scroll flag)
 ; 
 ; Clear 0x12.6
 ;             0x2c: mouse_buttons? (0: left, 1: right, 2: middle)
@@ -2657,7 +2657,7 @@
 ;
 
 ;
-; 0x2c.2 = 0  0x2c: mouse_buttons (0: left, 1: right, 2: middle)   
+;;; 0x2c.2 = 0  0x2c: mouse_buttons (0: left, 1: right, 2: middle)   
 ;;; NOP                           ;;; Enable to modify middle button scrolling
 ;             0x45: tp_mouse_buttons
 ; Set 1 to the 3rd bit of the value of 0x45 (#0x04 = 0000100)
@@ -3469,7 +3469,7 @@
 ;
 ;
 ;
-; Auto-scroll flag
+; Thinkpad preferred scrolling flag (Auto-scroll flag)
 ;
 ;
 ;
@@ -5645,7 +5645,7 @@
 ; B0MOV	UDR0_W, A	| UDR0_W = 0x2f
 ;				        |
 ; B0MOV	UDP0, A		| UDP0 = #0x1c
-;			 		    | Auto-scroll flag
+;			 		    | Thinkpad preferred scrolling flag (Auto-scroll flag)
 ;
 ; 					|
 ; B0MOV	UDR0_W, A	| UDR0_W = 0x30
@@ -5662,7 +5662,7 @@
 ; write UDR0 #0x00 at UDP0 #0x1d
 ; 2epoints
 ; 2fpoints
-; Auto-scroll flag
+; Thinkpad preferred scrolling flag (Auto-scroll flag)
 ;
 ;
 ;
@@ -5700,7 +5700,7 @@
 ; write UDR0 0x31 at UDP0 #0x19 
 ;
 ;
-; Auto-scroll flag
+; Thinkpad preferred scrolling flag (Auto-scroll flag)
 ;
 ;
 ; write UDR0 0x30 at UDP0 #0x1a
@@ -5711,7 +5711,7 @@
 ; write UDR0 #0x00 at UDP0 #0x1a
 
 ;
-; Auto-scroll flag
+; Thinkpad preferred scrolling flag (Auto-scroll flag)
 ;
 ;
 ;

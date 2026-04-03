@@ -21,6 +21,7 @@ use components::{
     SelectFnID,
     MacroKeySetting,
     MediaKeySetting,
+    TrackPointSpeedChart,
 };
 
 
@@ -28,7 +29,8 @@ use components::{
 
 use models::{
     Board, LogicalLayout, GeneralSeitting, MacroKey, 
-    default_fn_id, default_tp_sensitivity, default_macro_key_map, default_media_key_map, default_enable_middle_click
+    default_fn_id, default_tp_sensitivity, default_macro_key_map, default_media_key_map, default_enable_middle_click,
+    default_tp_accel_coeffs
 };
 use utils::{load_url, load_or_download_firmware};
 
@@ -107,6 +109,7 @@ pub fn MainWindow(
     let macro_key_map: Signal<BTreeMap<u8, MacroKey>> = use_signal(default_macro_key_map);
     let media_key_map: Signal<BTreeMap<u8, u16>> = use_signal(default_media_key_map);
     let mut enable_middle_click: Signal<bool> = use_signal(default_enable_middle_click);
+    let trackpoint_accelaration_coeffs: Signal<models::TrackPointAccelerationCoeffs> = use_signal(default_tp_accel_coeffs);
 
     // UI switch
     let current_tab = use_signal(|| models::Tab::Keyboard);
@@ -240,7 +243,17 @@ pub fn MainWindow(
                                     },
                                     models::Tab::Trackpoint => {
                                         rsx!{
-                                            SliderTPSensitivity { tp_sensitivity }
+                                            div { class: "flex gap-12 px-4 divide-x divide-gray-200",
+                                                div { class: "flex flex-col space-y-2",
+                                                    SliderTPSensitivity { tp_sensitivity }
+                                                }
+                                                div { class: "flex flex-col space-y-2",
+                                                    TrackPointSpeedChart {
+                                                        tp_data: trackpoint_accelaration_coeffs,
+                                                        // selected_speed: 5,
+                                                    }
+                                                }  
+                                            }
                                         }
                                     },
                                     models::Tab::KeyMatrix => {rsx!{}},

@@ -3870,175 +3870,175 @@
     },
     {
       "op": "insert",
-      "code": "    DW           0x0000               "
+      "code": "    DW           ${s/tp9_00/0x0000}               "
     },
     {
       "op": "insert",
-      "code": "    DW           0x0000               "
+      "code": "    DW           ${s/tp9_01/0x0000}               "
     },
     {
       "op": "insert",
-      "code": "    DW           0x0002               "
+      "code": "    DW           ${s/tp9_02/0x0001}               "
     },
     {
       "op": "insert",
-      "code": "    DW           0x0003               "
+      "code": "    DW           ${s/tp9_03/0x0002}               "
     },
     {
       "op": "insert",
-      "code": "    DW           0x0004               "
+      "code": "    DW           ${s/tp9_04/0x0004}               "
     },
     {
       "op": "insert",
-      "code": "    DW           0x0005               "
+      "code": "    DW           ${s/tp9_05/0x0006}               "
     },
     {
       "op": "insert",
-      "code": "    DW           0x0006               "
+      "code": "    DW           ${s/tp9_06/0x0008}               "
     },
     {
       "op": "insert",
-      "code": "    DW           0x0007               "
+      "code": "    DW           ${s/tp9_07/0x000a}               "
     },
     {
       "op": "insert",
-      "code": "    DW           0x0008               "
+      "code": "    DW           ${s/tp9_08/0x000c}               "
     },
     {
       "op": "insert",
-      "code": "    DW           0x0009               "
+      "code": "    DW           ${s/tp9_09/0x000e}               "
     },
     {
       "op": "insert",
-      "code": "    DW           0x000b               "
+      "code": "    DW           ${s/tp9_0a/0x0010}               "
     },
     {
       "op": "insert",
-      "code": "    DW           0x000c               "
+      "code": "    DW           ${s/tp9_0b/0x0012}               "
     },
     {
       "op": "insert",
-      "code": "    DW           0x000d               "
+      "code": "    DW           ${s/tp9_0c/0x0014}               "
     },
     {
       "op": "insert",
-      "code": "    DW           0x000e               "
+      "code": "    DW           ${s/tp9_0d/0x0016}               "
     },
     {
       "op": "insert",
-      "code": "    DW           0x000f               "
+      "code": "    DW           ${s/tp9_0e/0x0018}               "
     },
     {
       "op": "insert",
-      "code": "    DW           0x0010               "
+      "code": "    DW           ${s/tp9_0f/0x001a}               "
     },
     {
       "op": "insert",
-      "code": "    DW           0x0011               "
+      "code": "    DW           ${s/tp9_10/0x001d}               "
     },
     {
       "op": "insert",
-      "code": "    DW           0x0012               "
+      "code": "    DW           ${s/tp9_11/0x0020}               "
     },
     {
       "op": "insert",
-      "code": "    DW           0x0013               "
+      "code": "    DW           ${s/tp9_12/0x0023}               "
     },
     {
       "op": "insert",
-      "code": "    DW           0x0014               "
+      "code": "    DW           ${s/tp9_13/0x0026}               "
     },
     {
       "op": "insert",
-      "code": "    DW           0x0015               "
+      "code": "    DW           ${s/tp9_14/0x0029}               "
     },
     {
       "op": "insert",
-      "code": "    DW           0x0016               "
+      "code": "    DW           ${s/tp9_15/0x002c}               "
     },
     {
       "op": "insert",
-      "code": "    DW           0x0017               "
+      "code": "    DW           ${s/tp9_16/0x002f}               "
     },
     {
       "op": "insert",
-      "code": "    DW           0x0018               "
+      "code": "    DW           ${s/tp9_17/0x0032}               "
     },
     {
       "op": "insert",
-      "code": "    DW           0x0019               "
+      "code": "    DW           ${s/tp9_18/0x0035}               "
     },
     {
       "op": "insert",
-      "code": "    DW           0x001a               "
+      "code": "    DW           ${s/tp9_19/0x0038}               "
     },
     {
       "op": "insert",
-      "code": "    DW           0x001b               "
+      "code": "    DW           ${s/tp9_1a/0x003b}               "
     },
     {
       "op": "insert",
-      "code": "    DW           0x001c               "
+      "code": "    DW           ${s/tp9_1b/0x003e}               "
     },
     {
       "op": "insert",
-      "code": "    DW           0x001d               "
+      "code": "    DW           ${s/tp9_1c/0x0041}               "
     },
     {
       "op": "insert",
-      "code": "    DW           0x001e               "
+      "code": "    DW           ${s/tp9_1d/0x0044}               "
     },
     {
       "op": "insert",
-      "code": "    DW           0x0020               "
+      "code": "    DW           ${s/tp9_1e/0x0047}               "
     },
     {
       "op": "insert",
-      "code": "    DW           0x0021               "
+      "code": "    DW           ${s/tp9_1f/0x004a}               "
     },
     {
       "op": "insert",
-      "code": "    DW           0x0022               "
+      "code": "    DW           ${s/tp9_20/0x004d}               "
     },
     {
       "op": "insert",
-      "code": "    DW           0x0023               "
+      "code": "    DW           ${s/tp9_21/0x0050}               "
     },
     {
       "op": "insert",
-      "code": "    DW           0x0024               "
+      "code": "    DW           ${s/tp9_22/0x0053}               "
     },
     {
       "op": "insert",
-      "code": "    DW           0x0025               "
+      "code": "    DW           ${s/tp9_23/0x0056}               "
     },
     {
       "op": "insert",
-      "code": "    DW           0x0026               "
+      "code": "    DW           ${s/tp9_24/0x0059}               "
     },
     {
       "op": "insert",
-      "code": "    DW           0x0027               "
+      "code": "    DW           ${s/tp9_25/0x005c}               "
     },
     {
       "op": "insert",
-      "code": "    DW           0x0028               "
+      "code": "    DW           ${s/tp9_26/0x005f}               "
     },
     {
       "op": "insert",
-      "code": "    DW           0x0029               "
+      "code": "    DW           ${s/tp9_27/0x0062}               "
     },
     {
       "op": "insert",
-      "code": "    DW           0x002a               "
+      "code": "    DW           ${s/tp9_28/0x0065}               "
     },
     {
       "op": "insert",
-      "code": "    DW           0x002b               "
+      "code": "    DW           ${s/tp9_29/0x0068}               "
     },
     {
       "op": "insert",
-      "code": "    DW           0x002c               "
+      "code": "    DW           ${s/tp9_2a/0x007b}               "
     },
     {
       "op": "insert",
