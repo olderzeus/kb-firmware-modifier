@@ -61,7 +61,9 @@
    設定したメディアキー（Media01 - 11）をMainまたは2nd Layerにマッピング出来ます。
 
 7. **TrackPoint Speed**  
-   トラックポイント速度を設定します（デフォルト: 1）。トラックポイント速度を調節する際は、まずはLenovo公式ドライバ設定のポインタ速度およびOSのマウス速度設定を優先することをお勧めします。それらで満足な速度が得られない場合に、このファームウェアカスタマイズを検討してください。
+   トラックポイント速度を設定します。トラックポイントの傾きに対するカーソル速度を個別に設定できます。簡単なプリセット設定も利用できます。
+   Speed 1からSpeed 9は、ドライバ設定画面上の9段階の速度設定に対応しています。公式ドライバがインストールされていない環境（macOSなど）ではSpeed 5が使われます。
+   ![Trackpoint Settings](https://github.com/haborite/ku1255-firmware-modifier/blob/main/docs/trackpoint-overview.png)
 
 8. **Enable middle button click**  
    通常、MS Windows上で公式ドライバを使うと中ボタンクリックが無効化されてスクロール専用アイコンになりますが、
@@ -92,28 +94,6 @@
 5. ファームウェアインストーラーが起動したら **Start** をクリック
 6. インストールが完了したらインストーラーを閉じます
 7. キーボードをUSBから一度取り外し、再接続すると新しい設定が有効になります
-
-## 電気回路上のキーマトリクス
-
-|  | P1.0 | P1.1 | P1.2 | P1.3 | P1.4 | P1.5 | P1.6 | P1.7 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| P0.3 | UP | (none) | (none) | END | FN | PAUSE | LEFT | KP\_MEMSTORE |
-| P0.4 | (none) | HOME | (none) | F11 | (none) | (none) | DOWN | (none) |
-| P0.5 | F5 | F9 | INTERNATIONAL3 | F10 | BACKSLASH | RETURN | SPACE | BACKSPACE |
-| P0.6 | (none) | DELETE | (none) | INSERT | PRINTSCREEN | PAGEUP | PAGEDOWN | (none) |
-| P2.0 | F4 | F2 | E | 3 | D | C | (none) | F3 |
-| P2.1 | H | 6 | U | 7 | J | M | N | Y |
-| P2.2 | ESCAPE | GRAVE | Q | 1 | A | Z | INTERNATIONAL5 | TAB |
-| P2.3 | (none) | (none) | (none) | (none) | (none) | RSHIFT | (none) | LSHIFT |
-| P4.0 | NONUSBACKSLASH | F1 | W | 2 | S | X | (none) | CAPSLOCK |
-| P4.1 | G | 5 | R | 4 | F | V | B | T |
-| P4.2 | INTERNATIONAL4 | F8 | O | 9 | L | PERIOD | INTERNATIONAL2 | F7 |
-| P4.3 | APOSTROPHE | MINUS | P | 0 | SEMICOLON | NONUSHASH | SLASH | LEFTBRACKET |
-| P4.4 | F6 | EQUALS | I | 8 | K | COMMA | INTERNATIONAL1 | RIGHTBRACKET |
-| P4.5 | (none) | LCTRL | (none) | (none) | (none) | RCTRL | (none) | (none) |
-| P4.6 | LALT | KP\_MEMSUBTRACT | (none) | (none) | (none) | (none) | RALT | (none) |
-| P4.7 | (none) | (none) | KP\_MEMCLEAR | F12 | (none) | (none) | RIGHT | LGUI |
-
 
 ## 開発
 devlopment guideをご覧ください

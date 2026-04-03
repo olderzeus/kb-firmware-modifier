@@ -61,7 +61,8 @@ Since all modifications are written directly to the keyboard's firmware, **no sy
    Configure media keys such as volume control and display brightness (up to 11 functions).
 
 7. **TrackPoint Settings**  
-   Set the trackpoint speed settings. You can fully control the relashionships between trackpoint tilt amount and cursor speed. You can also easy preset settings (default: 1).
+   Set the trackpoint speed settings. You can fully control the relashionships between trackpoint tilt amount and cursor speed. You can also easy preset settings.
+   Speed 1 to 9 correspond to the 9-level speed setting in the driver control panel. OS without official driver installation will use Speed 5.
    ![Trackpoint Settings](https://github.com/haborite/ku1255-firmware-modifier/blob/main/docs/trackpoint-overview.png)
 
 8. **Other settings**
