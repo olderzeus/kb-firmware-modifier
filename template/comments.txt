@@ -654,398 +654,402 @@
 ; | 01000000 | ROM-Loaded POINT (8) <<< General One-hot pattern. used by func_04fd_003b, func_054f_003b, and non_l2_mod_keys
 ; | 10000000 | ROM-Loaded POINT (8) <<< General One-hot pattern. used by func_04fd_003b, func_054f_003b, and non_l2_mod_keys
 
-; | 0x0000 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_000d | trackpoint XY ?
-; | 0x0000 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_000d | trackpoint XY ?
-; | 0x0000 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_000d | trackpoint XY ?
-; | 0xffff | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_000d | trackpoint XY ?
-; | 0xfffe | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_000d | trackpoint XY ?
-; | 0xfffe | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_000d | trackpoint XY ?
-; | 0xfffd | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_000d | trackpoint XY ?
-; | 0xfffd | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_000d | trackpoint XY ?
-; | 0xfffc | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_000d | trackpoint XY ?
-; | 0xfffc | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_000d | trackpoint XY ?
-; | 0xfffb | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_000d | trackpoint XY ?
-; | 0xfffa | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_000d | trackpoint XY ?
-; | 0xfffa | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_000d | trackpoint XY ?
-; | 0xfff9 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_000d | trackpoint XY ?
-; | 0xfff9 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_000d | trackpoint XY ?
-; | 0xfff8 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_000d | trackpoint XY ?
-; | 0xfff8 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_000d | trackpoint XY ?
-; | 0xfff7 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_000d | trackpoint XY ?
-; | 0xfff7 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_000d | trackpoint XY ?
-; | 0xfff6 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_000d | trackpoint XY ?
-; | 0xfff6 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_000d | trackpoint XY ?
-; | 0xfff5 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_000d | trackpoint XY ?
-; | 0xfff4 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_000d | trackpoint XY ?
-; | 0xfff4 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_000d | trackpoint XY ?
-; | 0xfff3 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_000d | trackpoint XY ?
-; | 0xfff3 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_000d | trackpoint XY ?
-; | 0xfff2 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_000d | trackpoint XY ?
-; | 0xfff2 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_000d | trackpoint XY ?
-; | 0xfff1 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_000d | trackpoint XY ?
-; | 0xfff1 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_000d | trackpoint XY ?
-; | 0xfff0 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_000d | trackpoint XY ?
-; | 0xffef | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_000d | trackpoint XY ?
-; | 0xffef | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_000d | trackpoint XY ?
-; | 0xffee | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_000d | trackpoint XY ?
-; | 0xffee | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_000d | trackpoint XY ?
-; | 0xffed | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_000d | trackpoint XY ?
-; | 0xffed | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_000d | trackpoint XY ?
-; | 0xffec | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_000d | trackpoint XY ?
-; | 0xffec | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_000d | trackpoint XY ?
-; | 0xffeb | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_000d | trackpoint XY ?
-; | 0xffeb | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_000d | trackpoint XY ?
-; | 0xffea | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_000d | trackpoint XY ?
-; | 0xffe9 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_000d | trackpoint XY ?
-; | 0xffe9 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_000d | trackpoint XY ?
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xffff | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffe | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffe | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffd | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffd | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffc | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffc | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffb | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffa | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffa | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff9 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff9 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff8 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff8 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff7 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff7 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff6 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff6 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff5 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff4 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff4 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff3 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff3 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff2 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff2 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff1 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff1 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff0 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xffef | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xffef | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xffee | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xffee | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xffed | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xffed | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xffec | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xffec | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xffeb | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xffeb | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xffea | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xffe9 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xffe9 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
 
-; | 0x0000 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0010 | trackpoint XY ?
-; | 0x0000 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0010 | trackpoint XY ?
-; | 0xffff | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0010 | trackpoint XY ?
-; | 0xffff | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0010 | trackpoint XY ?
-; | 0xfffe | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0010 | trackpoint XY ?
-; | 0xfffe | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0010 | trackpoint XY ?
-; | 0xfffd | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0010 | trackpoint XY ?
-; | 0xfffd | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0010 | trackpoint XY ?
-; | 0xfffc | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0010 | trackpoint XY ?
-; | 0xfffc | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0010 | trackpoint XY ?
-; | 0xfffb | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0010 | trackpoint XY ?
-; | 0xfffb | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0010 | trackpoint XY ?
-; | 0xfffb | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0010 | trackpoint XY ?
-; | 0xfffa | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0010 | trackpoint XY ?
-; | 0xfffa | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0010 | trackpoint XY ?
-; | 0xfff9 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0010 | trackpoint XY ?
-; | 0xfff9 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0010 | trackpoint XY ?
-; | 0xfff8 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0010 | trackpoint XY ?
-; | 0xfff8 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0010 | trackpoint XY ?
-; | 0xfff7 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0010 | trackpoint XY ?
-; | 0xfff7 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0010 | trackpoint XY ?
-; | 0xfff7 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0010 | trackpoint XY ?
-; | 0xfff6 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0010 | trackpoint XY ?
-; | 0xfff6 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0010 | trackpoint XY ?
-; | 0xfff5 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0010 | trackpoint XY ?
-; | 0xfff5 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0010 | trackpoint XY ?
-; | 0xfff4 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0010 | trackpoint XY ?
-; | 0xfff4 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0010 | trackpoint XY ?
-; | 0xfff3 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0010 | trackpoint XY ?
-; | 0xfff3 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0010 | trackpoint XY ?
-; | 0xfff2 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0010 | trackpoint XY ?
-; | 0xfff2 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0010 | trackpoint XY ?
-; | 0xfff2 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0010 | trackpoint XY ?
-; | 0xfff1 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0010 | trackpoint XY ?
-; | 0xfff1 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0010 | trackpoint XY ?
-; | 0xfff0 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0010 | trackpoint XY ?
-; | 0xfff0 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0010 | trackpoint XY ?
-; | 0xffef | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0010 | trackpoint XY ?
-; | 0xffef | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0010 | trackpoint XY ?
-; | 0xffee | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0010 | trackpoint XY ?
-; | 0xffee | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0010 | trackpoint XY ?
-; | 0xffee | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0010 | trackpoint XY ?
-; | 0xffed | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0010 | trackpoint XY ?
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xffff | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xffff | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffe | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffe | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffd | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffd | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffc | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffc | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffb | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffb | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffb | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffa | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffa | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff9 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff9 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff8 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff8 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff7 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff7 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff7 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff6 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff6 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff5 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff5 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff4 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff4 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff3 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff3 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff2 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff2 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff2 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff1 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff1 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff0 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff0 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xffef | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xffef | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xffee | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xffee | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xffee | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xffed | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
 
-; | 0x0000 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0013 | trackpoint XY ?
-; | 0x0000 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0013 | trackpoint XY ?
-; | 0x0000 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0013 | trackpoint XY ?
-; | 0xffff | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0013 | trackpoint XY ?
-; | 0xffff | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0013 | trackpoint XY ?
-; | 0xffff | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0013 | trackpoint XY ?
-; | 0xfffe | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0013 | trackpoint XY ?
-; | 0xfffe | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0013 | trackpoint XY ?
-; | 0xfffe | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0013 | trackpoint XY ?
-; | 0xfffe | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0013 | trackpoint XY ?
-; | 0xfffd | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0013 | trackpoint XY ?
-; | 0xfffd | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0013 | trackpoint XY ?
-; | 0xfffd | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0013 | trackpoint XY ?
-; | 0xfffd | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0013 | trackpoint XY ?
-; | 0xfffc | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0013 | trackpoint XY ?
-; | 0xfffc | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0013 | trackpoint XY ?
-; | 0xfffc | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0013 | trackpoint XY ?
-; | 0xfffc | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0013 | trackpoint XY ?
-; | 0xfffb | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0013 | trackpoint XY ?
-; | 0xfffb | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0013 | trackpoint XY ?
-; | 0xfffb | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0013 | trackpoint XY ?
-; | 0xfffb | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0013 | trackpoint XY ?
-; | 0xfffa | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0013 | trackpoint XY ?
-; | 0xfffa | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0013 | trackpoint XY ?
-; | 0xfffa | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0013 | trackpoint XY ?
-; | 0xfffa | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0013 | trackpoint XY ?
-; | 0xfff9 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0013 | trackpoint XY ?
-; | 0xfff9 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0013 | trackpoint XY ?
-; | 0xfff9 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0013 | trackpoint XY ?
-; | 0xfff9 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0013 | trackpoint XY ?
-; | 0xfff8 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0013 | trackpoint XY ?
-; | 0xfff8 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0013 | trackpoint XY ?
-; | 0xfff8 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0013 | trackpoint XY ?
-; | 0xfff8 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0013 | trackpoint XY ?
-; | 0xfff7 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0013 | trackpoint XY ?
-; | 0xfff7 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0013 | trackpoint XY ?
-; | 0xfff7 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0013 | trackpoint XY ?
-; | 0xfff7 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0013 | trackpoint XY ?
-; | 0xfff6 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0013 | trackpoint XY ?
-; | 0xfff6 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0013 | trackpoint XY ?
-; | 0xfff6 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0013 | trackpoint XY ?
-; | 0xfff6 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0013 | trackpoint XY ?
-; | 0xfff6 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0013 | trackpoint XY ?
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xffff | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xffff | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xffff | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffe | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffe | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffe | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffe | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffd | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffd | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffd | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffd | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffc | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffc | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffc | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffc | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffb | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffb | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffb | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffb | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffa | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffa | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffa | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffa | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff9 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff9 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff9 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff9 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff8 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff8 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff8 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff8 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff7 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff7 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff7 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff7 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff6 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff6 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff6 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff6 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfff6 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
 
-; | 0x0000 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0016 | trackpoint XY ?
-; | 0x0000 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0016 | trackpoint XY ?
-; | 0x0000 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0016 | trackpoint XY ?
-; | 0x0000 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0016 | trackpoint XY ?
-; | 0xffff | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0016 | trackpoint XY ?
-; | 0xffff | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0016 | trackpoint XY ?
-; | 0xffff | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0016 | trackpoint XY ?
-; | 0xffff | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0016 | trackpoint XY ?
-; | 0xffff | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0016 | trackpoint XY ?
-; | 0xffff | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0016 | trackpoint XY ?
-; | 0xffff | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0016 | trackpoint XY ?
-; | 0xfffe | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0016 | trackpoint XY ?
-; | 0xfffe | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0016 | trackpoint XY ?
-; | 0xfffe | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0016 | trackpoint XY ?
-; | 0xfffe | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0016 | trackpoint XY ?
-; | 0xfffe | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0016 | trackpoint XY ?
-; | 0xfffe | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0016 | trackpoint XY ?
-; | 0xfffd | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0016 | trackpoint XY ?
-; | 0xfffd | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0016 | trackpoint XY ?
-; | 0xfffd | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0016 | trackpoint XY ?
-; | 0xfffd | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0016 | trackpoint XY ?
-; | 0xfffd | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0016 | trackpoint XY ?
-; | 0xfffd | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0016 | trackpoint XY ?
-; | 0xfffd | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0016 | trackpoint XY ?
-; | 0xfffc | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0016 | trackpoint XY ?
-; | 0xfffc | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0016 | trackpoint XY ?
-; | 0xfffc | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0016 | trackpoint XY ?
-; | 0xfffc | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0016 | trackpoint XY ?
-; | 0xfffc | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0016 | trackpoint XY ?
-; | 0xfffc | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0016 | trackpoint XY ?
-; | 0xfffc | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0016 | trackpoint XY ?
-; | 0xfffb | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0016 | trackpoint XY ?
-; | 0xfffb | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0016 | trackpoint XY ?
-; | 0xfffb | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0016 | trackpoint XY ?
-; | 0xfffb | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0016 | trackpoint XY ?
-; | 0xfffb | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0016 | trackpoint XY ?
-; | 0xfffb | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0016 | trackpoint XY ?
-; | 0xfffa | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0016 | trackpoint XY ?
-; | 0xfffa | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0016 | trackpoint XY ?
-; | 0xfffa | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0016 | trackpoint XY ?
-; | 0xfffa | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0016 | trackpoint XY ?
-; | 0xfffa | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0016 | trackpoint XY ?
-; | 0xfffa | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0016 | trackpoint XY ?
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xffff | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xffff | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xffff | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xffff | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xffff | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xffff | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xffff | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffe | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffe | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffe | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffe | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffe | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffe | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffd | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffd | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffd | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffd | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffd | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffd | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffd | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffc | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffc | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffc | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffc | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffc | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffc | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffc | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffb | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffb | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffb | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffb | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffb | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffb | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffa | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffa | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffa | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffa | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffa | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0xfffa | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
 
-; | 0x0000 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0019 | trackpoint XY ?
-; | 0x0000 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0019 | trackpoint XY ?
-; | 0x0001 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0019 | trackpoint XY ?
-; | 0x0001 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0019 | trackpoint XY ?
-; | 0x0001 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0019 | trackpoint XY ?
-; | 0x0001 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0019 | trackpoint XY ?
-; | 0x0002 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0019 | trackpoint XY ?
-; | 0x0002 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0019 | trackpoint XY ?
-; | 0x0002 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0019 | trackpoint XY ?
-; | 0x0002 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0019 | trackpoint XY ?
-; | 0x0003 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0019 | trackpoint XY ?
-; | 0x0003 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0019 | trackpoint XY ?
-; | 0x0003 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0019 | trackpoint XY ?
-; | 0x0003 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0019 | trackpoint XY ?
-; | 0x0004 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0019 | trackpoint XY ?
-; | 0x0004 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0019 | trackpoint XY ?
-; | 0x0004 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0019 | trackpoint XY ?
-; | 0x0004 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0019 | trackpoint XY ?
-; | 0x0005 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0019 | trackpoint XY ?
-; | 0x0005 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0019 | trackpoint XY ?
-; | 0x0005 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0019 | trackpoint XY ?
-; | 0x0005 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0019 | trackpoint XY ?
-; | 0x0006 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0019 | trackpoint XY ?
-; | 0x0006 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0019 | trackpoint XY ?
-; | 0x0006 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0019 | trackpoint XY ?
-; | 0x0006 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0019 | trackpoint XY ?
-; | 0x0007 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0019 | trackpoint XY ?
-; | 0x0007 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0019 | trackpoint XY ?
-; | 0x0007 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0019 | trackpoint XY ?
-; | 0x0007 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0019 | trackpoint XY ?
-; | 0x0008 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0019 | trackpoint XY ?
-; | 0x0008 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0019 | trackpoint XY ?
-; | 0x0008 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0019 | trackpoint XY ?
-; | 0x0008 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0019 | trackpoint XY ?
-; | 0x0009 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0019 | trackpoint XY ?
-; | 0x0009 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0019 | trackpoint XY ?
-; | 0x0009 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0019 | trackpoint XY ?
-; | 0x0009 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0019 | trackpoint XY ?
-; | 0x000a | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0019 | trackpoint XY ?
-; | 0x000a | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0019 | trackpoint XY ?
-; | 0x000a | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0019 | trackpoint XY ?
-; | 0x000a | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0019 | trackpoint XY ?
-; | 0x000b | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0019 | trackpoint XY ?
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
 
-; | 0x0000 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001c | trackpoint XY ?
-; | 0x0000 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001c | trackpoint XY ?
-; | 0x0001 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001c | trackpoint XY ?
-; | 0x0002 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001c | trackpoint XY ?
-; | 0x0002 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001c | trackpoint XY ?
-; | 0x0003 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001c | trackpoint XY ?
-; | 0x0003 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001c | trackpoint XY ?
-; | 0x0004 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001c | trackpoint XY ?
-; | 0x0004 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001c | trackpoint XY ?
-; | 0x0005 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001c | trackpoint XY ?
-; | 0x0006 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001c | trackpoint XY ?
-; | 0x0006 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001c | trackpoint XY ?
-; | 0x0007 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001c | trackpoint XY ?
-; | 0x0007 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001c | trackpoint XY ?
-; | 0x0008 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001c | trackpoint XY ?
-; | 0x0008 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001c | trackpoint XY ?
-; | 0x0009 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001c | trackpoint XY ?
-; | 0x0009 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001c | trackpoint XY ?
-; | 0x000a | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001c | trackpoint XY ?
-; | 0x000a | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001c | trackpoint XY ?
-; | 0x000b | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001c | trackpoint XY ?
-; | 0x000c | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001c | trackpoint XY ?
-; | 0x000c | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001c | trackpoint XY ?
-; | 0x000d | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001c | trackpoint XY ?
-; | 0x000d | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001c | trackpoint XY ?
-; | 0x000e | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001c | trackpoint XY ?
-; | 0x000e | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001c | trackpoint XY ?
-; | 0x000f | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001c | trackpoint XY ?
-; | 0x000f | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001c | trackpoint XY ?
-; | 0x0010 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001c | trackpoint XY ?
-; | 0x0011 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001c | trackpoint XY ?
-; | 0x0011 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001c | trackpoint XY ?
-; | 0x0012 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001c | trackpoint XY ?
-; | 0x0012 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001c | trackpoint XY ?
-; | 0x0013 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001c | trackpoint XY ?
-; | 0x0013 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001c | trackpoint XY ?
-; | 0x0014 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001c | trackpoint XY ?
-; | 0x0014 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001c | trackpoint XY ?
-; | 0x0015 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001c | trackpoint XY ?
-; | 0x0015 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001c | trackpoint XY ?
-; | 0x0016 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001c | trackpoint XY ?
-; | 0x0017 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001c | trackpoint XY ?
-; | 0x0017 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001c | trackpoint XY ?
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0001 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0001 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0001 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0001 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0002 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0002 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0002 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0002 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0003 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0003 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0003 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0003 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0004 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0004 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0004 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0004 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0005 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0005 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0005 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0005 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0006 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0006 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0006 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0006 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0007 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0007 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0007 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0007 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0008 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0008 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0008 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0008 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0009 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0009 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0009 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0009 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x000a | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x000a | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x000a | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x000a | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x000b | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
 
-; | 0x0000 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001f | trackpoint XY ?
-; | 0x0000 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001f | trackpoint XY ?
-; | 0x0000 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001f | trackpoint XY ?
-; | 0x0002 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001f | trackpoint XY ?
-; | 0x0003 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001f | trackpoint XY ?
-; | 0x0003 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001f | trackpoint XY ?
-; | 0x0004 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001f | trackpoint XY ?
-; | 0x0005 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001f | trackpoint XY ?
-; | 0x0006 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001f | trackpoint XY ?
-; | 0x0007 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001f | trackpoint XY ?
-; | 0x0008 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001f | trackpoint XY ?
-; | 0x0009 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001f | trackpoint XY ?
-; | 0x0009 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001f | trackpoint XY ?
-; | 0x000a | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001f | trackpoint XY ?
-; | 0x000b | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001f | trackpoint XY ?
-; | 0x000c | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001f | trackpoint XY ?
-; | 0x000d | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001f | trackpoint XY ?
-; | 0x000e | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001f | trackpoint XY ?
-; | 0x000e | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001f | trackpoint XY ?
-; | 0x000f | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001f | trackpoint XY ?
-; | 0x0010 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001f | trackpoint XY ?
-; | 0x0011 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001f | trackpoint XY ?
-; | 0x0012 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001f | trackpoint XY ?
-; | 0x0013 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001f | trackpoint XY ?
-; | 0x0014 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001f | trackpoint XY ?
-; | 0x0014 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001f | trackpoint XY ?
-; | 0x0015 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001f | trackpoint XY ?
-; | 0x0016 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001f | trackpoint XY ?
-; | 0x0017 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001f | trackpoint XY ?
-; | 0x0018 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001f | trackpoint XY ?
-; | 0x0019 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001f | trackpoint XY ?
-; | 0x001a | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001f | trackpoint XY ?
-; | 0x001a | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001f | trackpoint XY ?
-; | 0x001b | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001f | trackpoint XY ?
-; | 0x001c | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001f | trackpoint XY ?
-; | 0x001d | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001f | trackpoint XY ?
-; | 0x001e | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001f | trackpoint XY ?
-; | 0x001f | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001f | trackpoint XY ?
-; | 0x001f | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_001f | trackpoint XY ?
-; | 0x0020 | .  | ROM-Loaded POINT (9) <<< reffered from func_07e6_001f | trackpoint XY ?
-; | 0x0021 | .! | ROM-Loaded POINT (9) <<< reffered from func_07e6_001f | trackpoint XY ?
-; | 0x0022 | ." | ROM-Loaded POINT (9) <<< reffered from func_07e6_001f | trackpoint XY ?
-; | 0x0023 | .# | ROM-Loaded POINT (9) <<< reffered from func_07e6_001f | trackpoint XY ?
-; | 0x0024 | .$ | ROM-Loaded POINT (9) <<< reffered from func_07e6_001f | trackpoint XY ?
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0001 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0002 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0002 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0003 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0003 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0004 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0004 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0005 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0006 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0006 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0007 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0007 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0008 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0008 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0009 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0009 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x000a | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x000a | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x000b | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x000c | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x000c | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x000d | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x000d | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x000e | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x000e | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x000f | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x000f | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0010 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0011 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0011 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0012 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0012 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0013 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0013 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0014 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0014 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0015 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0015 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0016 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0017 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0017 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
 
-; | 0x0000 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0022 | trackpoint XY ?
-; | 0x0000 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0022 | trackpoint XY ?
-; | 0x0002 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0022 | trackpoint XY ?
-; | 0x0003 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0022 | trackpoint XY ?
-; | 0x0004 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0022 | trackpoint XY ?
-; | 0x0005 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0022 | trackpoint XY ?
-; | 0x0006 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0022 | trackpoint XY ?
-; | 0x0007 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0022 | trackpoint XY ?
-; | 0x0008 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0022 | trackpoint XY ?
-; | 0x0009 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0022 | trackpoint XY ?
-; | 0x000b | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0022 | trackpoint XY ?
-; | 0x000c | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0022 | trackpoint XY ?
-; | 0x000d | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0022 | trackpoint XY ?
-; | 0x000e | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0022 | trackpoint XY ?
-; | 0x000f | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0022 | trackpoint XY ?
-; | 0x0010 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0022 | trackpoint XY ?
-; | 0x0011 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0022 | trackpoint XY ?
-; | 0x0012 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0022 | trackpoint XY ?
-; | 0x0013 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0022 | trackpoint XY ?
-; | 0x0014 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0022 | trackpoint XY ?
-; | 0x0015 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0022 | trackpoint XY ?
-; | 0x0016 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0022 | trackpoint XY ?
-; | 0x0017 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0022 | trackpoint XY ?
-; | 0x0018 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0022 | trackpoint XY ?
-; | 0x0019 | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0022 | trackpoint XY ?
-; | 0x001a | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0022 | trackpoint XY ?
-; | 0x001b | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0022 | trackpoint XY ?
-; | 0x001c | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0022 | trackpoint XY ?
-; | 0x001d | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0022 | trackpoint XY ?
-; | 0x001e | .. | ROM-Loaded POINT (9) <<< reffered from func_07e6_0022 | trackpoint XY ?
-; | 0x0020 | .  | ROM-Loaded POINT (9) <<< reffered from func_07e6_0022 | trackpoint XY ?
-; | 0x0021 | .! | ROM-Loaded POINT (9) <<< reffered from func_07e6_0022 | trackpoint XY ?
-; | 0x0022 | ." | ROM-Loaded POINT (9) <<< reffered from func_07e6_0022 | trackpoint XY ?
-; | 0x0023 | .# | ROM-Loaded POINT (9) <<< reffered from func_07e6_0022 | trackpoint XY ?
-; | 0x0024 | .$ | ROM-Loaded POINT (9) <<< reffered from func_07e6_0022 | trackpoint XY ?
-; | 0x0025 | .% | ROM-Loaded POINT (9) <<< reffered from func_07e6_0022 | trackpoint XY ?
-; | 0x0026 | .& | ROM-Loaded POINT (9) <<< reffered from func_07e6_0022 | trackpoint XY ?
-; | 0x0027 | .' | ROM-Loaded POINT (9) <<< reffered from func_07e6_0022 | trackpoint XY ?
-; | 0x0028 | .( | ROM-Loaded POINT (9) <<< reffered from func_07e6_0022 | trackpoint XY ?
-; | 0x0029 | .) | ROM-Loaded POINT (9) <<< reffered from func_07e6_0022 | trackpoint XY ?
-; | 0x002a | .* | ROM-Loaded POINT (9) <<< reffered from func_07e6_0022 | trackpoint XY ?
-; | 0x002b | .+ | ROM-Loaded POINT (9) <<< reffered from func_07e6_0022 | trackpoint XY ?
-; | 0x002c | ., | ROM-Loaded POINT (9) <<< reffered from func_07e6_0022 | trackpoint XY ?
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0002 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0003 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0003 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0004 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0005 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0006 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0007 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0008 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0009 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0009 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x000a | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x000b | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x000c | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x000d | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x000e | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x000e | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x000f | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0010 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0011 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0012 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0013 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0014 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0014 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0015 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0016 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0017 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0018 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0019 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x001a | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x001a | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x001b | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x001c | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x001d | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x001e | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x001f | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x001f | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0020 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0021 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0022 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0023 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0024 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
 
-;; <NOP> <- CURRENTLY NOT USED
-;; <NOP> <- CURRENTLY NOT USED
-;; <NOP> <- CURRENTLY NOT USED
-;; <NOP> <- CURRENTLY NOT USED
-;; <NOP> <- CURRENTLY NOT USED
-;; <NOP> <- CURRENTLY NOT USED
-;; <NOP> <- CURRENTLY NOT USED
-;; <NOP> <- CURRENTLY NOT USED
-;; <NOP> <- CURRENTLY NOT USED
-;; <NOP> <- CURRENTLY NOT USED
-;; <NOP> <- CURRENTLY NOT USED
-;; <NOP> <- CURRENTLY NOT USED
-;; <NOP> <- CURRENTLY NOT USED
-;; <NOP> <- CURRENTLY NOT USED
-;; <NOP> <- CURRENTLY NOT USED
-;; <NOP> <- CURRENTLY NOT USED
-;; <NOP> <- CURRENTLY NOT USED
-;; <NOP> <- CURRENTLY NOT USED
-;; <NOP> <- CURRENTLY NOT USED
-;; <NOP> <- CURRENTLY NOT USED
-;; <NOP> <- CURRENTLY NOT USED
-;; <NOP> <- CURRENTLY NOT USED
-;; <NOP> <- CURRENTLY NOT USED
-;; <NOP> <- CURRENTLY NOT USED
-;; <NOP> <- CURRENTLY NOT USED
-;; <NOP> <- CURRENTLY NOT USED
-;; <NOP> <- CURRENTLY NOT USED
-;; <NOP> <- CURRENTLY NOT USED
-;; <NOP> <- CURRENTLY NOT USED
-;; <NOP> <- CURRENTLY NOT USED
-;; <NOP> <- CURRENTLY NOT USED
-;; <NOP> <- CURRENTLY NOT USED
-;; <NOP> <- CURRENTLY NOT USED
-;; <NOP> <- CURRENTLY NOT USED
-;; <NOP> <- CURRENTLY NOT USED
-;; <NOP> <- CURRENTLY NOT USED
-;; <NOP> <- CURRENTLY NOT USED
-;; <NOP> <- CURRENTLY NOT USED
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0000 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0002 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0003 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0004 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0005 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0006 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0007 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0008 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0009 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x000b | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x000c | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x000d | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x000e | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x000f | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0010 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0011 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0012 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0013 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0014 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0015 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0016 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0017 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0018 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0019 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x001a | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x001b | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x001c | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x001d | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x001e | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0020 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0021 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0022 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0023 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0024 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0025 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0026 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0026 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0028 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x0029 | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x002a | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x002b | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+; | 0x002c | <- trackpoint accelaration coefficient -| ROM-Loaded POINT (9) <<<
+
 ;; <NOP> <- CURRENTLY NOT USED
 ;; <NOP> <- CURRENTLY NOT USED
 ;; <NOP> <- CURRENTLY NOT USED
@@ -2405,10 +2409,6 @@
 ; tp_apply_speed_x
 ; tp_apply_speed_y
 ; [RETURN POINT FROM TRACKPOINT PROCESS] copy_clamp_tp_mouse_pos ; tp_mouse_d? -> mouse_d?
-;; [ tp speed++ ] x2
-;; [ tp speed++ ] x3
-;; [ tp speed++ ] x4
-;; [ tp speed++ ] x5
 
 ; Related to the auto-scrolling
 ;;; [Middle-button 2] Write No operation to disable the auto-scrolling
@@ -2760,41 +2760,42 @@
 
 ;
 ; Y = #0x02
-; Z = #0x80
+; Z = #0x7f
 ;
 
 ;
 ; Y = #0x02
-; Z = #0xab
+; Z = #0xaa
 ;
 
 ;
 ; Y = #0x02
-; Z = #0xd6
+; Z = #0xd5
 ;
 
 ;
 ; Y = #0x03
-; Z = #0x01
+; Z = #0x00
 ;
 
 ;
 ; Y = #0x03
-; Z = #0x2c
+; Z = #0x2b
 ;
 
 ;
 ; Y = #0x03
-; Z = #0x57
+; Z = #0x56
 ;
 
 ;
 ; Y = #0x03
-; Z = #0x83
-;
-;
+; Z = #0x81
 ;
 
+;
+; Y = #0x03
+; Z = #0xac
 ;
 ;
 ;
