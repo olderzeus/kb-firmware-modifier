@@ -39,7 +39,7 @@ pub fn ButtonInstall(
 ) -> Element {
     rsx! {
         button {
-            class: "px-4 py-2 bg-gray-800 text-white rounded shadow hover:bg-gray-700 border border-white",
+            class: "px-4 py-2 bg-indigo-900 text-white rounded shadow hover:bg-indigo-600 border border-white",
             onclick: move |_| {
                 install_firmware_by_flashsn8(
                     id_layout_l0,

@@ -60,14 +60,12 @@ Since all modifications are written directly to the keyboard's firmware, **no sy
 6. **Media Keys**  
    Configure media keys such as volume control and display brightness (up to 11 functions).
 
-7. **TrackPoint Speed**  
-   Set the trackpoint speed (default: 1). This has nothing to do with Lenovo driver settings or OS mouse settings. It is better to adjust these two settings first before modifying this firmware.
+7. **TrackPoint Settings**  
+   Set the trackpoint speed settings. You can fully control the relashionships between trackpoint tilt amount and cursor speed. You can also easy preset settings (default: 1).
+   ![Trackpoint Settings](https://github.com/haborite/ku1255-firmware-modifier/blob/main/docs/trackpoint-overview.png)
 
-8. **Enable middle button click**  
-   Enable middle button click (just like on a standard mouse) even with the official driver on MS Windows.
-
-9. **Fn / Media Trigger**  
-   Assign Fn-key functionality in addition to the original behavior of any selected key.
+8. **Other settings**
+   Other useful settings (e.g. Assign Fn-key functionality in addition to the original behavior of any selected key.)
 
 10. **Load config**  
    Load a previously saved keymap from a `.json` file.
@@ -90,27 +88,6 @@ Since all modifications are written directly to the keyboard's firmware, **no sy
 5. When the firmware installer launches, click **Start**.
 6. After installation finishes, close the installer.
 7. Unplug and reconnect the keyboard. The new keymap will take effect.
-
-## Electrical key matrix
-
-|  | P1.0 | P1.1 | P1.2 | P1.3 | P1.4 | P1.5 | P1.6 | P1.7 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| P0.3 | UP | (none) | (none) | END | FN | PAUSE | LEFT | KP\_MEMSTORE |
-| P0.4 | (none) | HOME | (none) | F11 | (none) | (none) | DOWN | (none) |
-| P0.5 | F5 | F9 | INTERNATIONAL3 | F10 | BACKSLASH | RETURN | SPACE | BACKSPACE |
-| P0.6 | (none) | DELETE | (none) | INSERT | PRINTSCREEN | PAGEUP | PAGEDOWN | (none) |
-| P2.0 | F4 | F2 | E | 3 | D | C | (none) | F3 |
-| P2.1 | H | 6 | U | 7 | J | M | N | Y |
-| P2.2 | ESCAPE | GRAVE | Q | 1 | A | Z | INTERNATIONAL5 | TAB |
-| P2.3 | (none) | (none) | (none) | (none) | (none) | RSHIFT | (none) | LSHIFT |
-| P4.0 | NONUSBACKSLASH | F1 | W | 2 | S | X | (none) | CAPSLOCK |
-| P4.1 | G | 5 | R | 4 | F | V | B | T |
-| P4.2 | INTERNATIONAL4 | F8 | O | 9 | L | PERIOD | INTERNATIONAL2 | F7 |
-| P4.3 | APOSTROPHE | MINUS | P | 0 | SEMICOLON | NONUSHASH | SLASH | LEFTBRACKET |
-| P4.4 | F6 | EQUALS | I | 8 | K | COMMA | INTERNATIONAL1 | RIGHTBRACKET |
-| P4.5 | (none) | LCTRL | (none) | (none) | (none) | RCTRL | (none) | (none) |
-| P4.6 | LALT | KP\_MEMSUBTRACT | (none) | (none) | (none) | (none) | RALT | (none) |
-| P4.7 | (none) | (none) | KP\_MEMCLEAR | F12 | (none) | (none) | RIGHT | LGUI |
 
 ---
 
