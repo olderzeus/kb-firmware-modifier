@@ -244,7 +244,7 @@ pub fn MainWindow(
                                     models::Tab::Trackpoint => {
                                         rsx!{
                                             div { class: "flex gap-12 px-4",
-                                                div { class: "flex flex-col space-y-2",
+                                                div { class: "flex flex-col space-y-2 min-w-[600px]",
                                                     TrackPointSpeedPresetButtons { 
                                                         tp_data: trackpoint_speed_settings, 
                                                         default_coeffs: default_tp_accel_coeffs().coeffs.clone()
@@ -257,7 +257,10 @@ pub fn MainWindow(
                                                     TrackPointSpeedTableEditor {
                                                         tp_data: trackpoint_speed_settings,
                                                     }
-                                                }  
+                                                    label { class: "text-s text-gray-100 items-right",
+                                                        "\"Speed 5\" will be used if the driver is not installed in OS (e.g. macOS)"
+                                                    }
+                                                }
                                             }
 
                                         }

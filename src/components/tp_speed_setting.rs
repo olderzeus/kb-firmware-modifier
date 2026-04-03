@@ -140,7 +140,7 @@ pub fn TrackPointSpeedChart(tp_data: Signal<TrackPointSpeedSettings>) -> Element
                         x: x_to_px(tick as f32),
                         y: plot_y + plot_h + 22.0,
                         text_anchor: "middle",
-                        font_size: "12",
+                        font_size: "14",
                         fill: "#fafafa",
                         "{tick}"
                     }
@@ -151,7 +151,7 @@ pub fn TrackPointSpeedChart(tp_data: Signal<TrackPointSpeedSettings>) -> Element
                         x: plot_x - 10.0,
                         y: y_to_px(tick as f32) + 4.0,
                         text_anchor: "end",
-                        font_size: "12",
+                        font_size: "14",
                         fill: "#fafafa",
                         "{tick}"
                     }
@@ -161,7 +161,7 @@ pub fn TrackPointSpeedChart(tp_data: Signal<TrackPointSpeedSettings>) -> Element
                     x: plot_x + plot_w / 2.0,
                     y: HEIGHT - 10.0,
                     text_anchor: "middle",
-                    font_size: "13",
+                    font_size: "16",
                     fill: "#e4e4e7",
                     "Tilt amount"
                 }
@@ -170,7 +170,7 @@ pub fn TrackPointSpeedChart(tp_data: Signal<TrackPointSpeedSettings>) -> Element
                     y: plot_y + plot_h / 2.0,
                     transform: format!("rotate(-90 20 {})", plot_y + plot_h / 2.0),
                     text_anchor: "middle",
-                    font_size: "13",
+                    font_size: "16",
                     fill: "#e4e4e7",
                     "Cursor speed"
                 }
@@ -223,7 +223,7 @@ pub fn TrackPointSpeedTableEditor(
     rsx! {
         div {
             class: "mb-3 text-lg font-semibold text-gray-300",
-            "Detailed speed setting"
+            "Manual settings"
         }
 
         div { class: "min-h-0 max-h-[600px] overflow-y-auto border border-gray-100",
@@ -341,9 +341,10 @@ const PRESET_1: [[i8; 43]; 9] = [
             67,    68,    70,    72,    74,    76,    78,
         ],
         [
-             0,  2,  4,  6,  8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40,
-            42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 80, 82,
-            84,
+             0,     1,     4,     6,     8,    10,    12,    14,    16,    18,    21,    23,
+            25,    27,    29,    31,    33,    35,    37,    39,    41,    43,    45,    47,
+            49,    51,    53,    55,    57,    59,    62,    64,    66,    68,    70,    72,
+            74,    76,    78,    80,    82,    84,    86,
         ],
         [
              0,  3,  6,  9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 48, 51, 54, 57, 60,
@@ -390,9 +391,10 @@ const PRESET_2: [[i8; 43]; 9] = [
             67,    68,    70,    72,    74,    76,    78,
         ],
         [
-             0,  2,  4,  6,  8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40,
-            42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 80, 82,
-            84,
+             0,     1,     4,     6,     8,    10,    12,    14,    16,    18,    21,    23,
+            25,    27,    29,    31,    33,    35,    37,    39,    41,    43,    45,    47,
+            49,    51,    53,    55,    57,    59,    62,    64,    66,    68,    70,    72,
+            74,    76,    78,    80,    82,    84,    86,
         ],
         [
              0,  3,  6,  9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 48, 51, 54, 57, 60,
@@ -438,9 +440,10 @@ const PRESET_3: [[i8; 43]; 9] = [
             67,    68,    70,    72,    74,    76,    78,
         ],
         [
-             0,  2,  4,  6,  8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40,
-            42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 80, 82,
-            84,
+             0,     1,     4,     6,     8,    10,    12,    14,    16,    18,    21,    23,
+            25,    27,    29,    31,    33,    35,    37,    39,    41,    43,    45,    47,
+            49,    51,    53,    55,    57,    59,    62,    64,    66,    68,    70,    72,
+            74,    76,    78,    80,    82,    84,    86,
         ],
         [
              0,  3,  6,  9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 48, 51, 54, 57, 60,
@@ -485,9 +488,10 @@ const PRESET_4: [[i8; 43]; 9] = [
             67,    68,    70,    72,    74,    76,    78,
         ],
         [
-             0,  2,  4,  6,  8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40,
-            42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 80, 82,
-            84,
+             0,     1,     4,     6,     8,    10,    12,    14,    16,    18,    21,    23,
+            25,    27,    29,    31,    33,    35,    37,    39,    41,    43,    45,    47,
+            49,    51,    53,    55,    57,    59,    62,    64,    66,    68,    70,    72,
+            74,    76,    78,    80,    82,    84,    86,
         ],
         [
              0,  3,  6,  9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 48, 51, 54, 57, 60,
@@ -564,7 +568,17 @@ pub fn TrackPointSpeedPresetButtons(
             button {
                 class: "{button_class}",
                 onclick: move |_| apply_preset(tp_data, PRESET_4),
-                "Preset 4 (fastest)"
+                "Preset 4"
+            }
+        }
+        div {
+            svg {
+                style: "width: 100%; height: 50px; margin-bottom: 20px;",
+                view_box: "0 0 300 50",
+                xmlns: "http://www.w3.org/2000/svg",
+                line { x1: "0", y1: "25", x2: "280", y2: "25", stroke: "#f3f4f6", stroke_width: "2" },
+                polygon { points: "280,20 290,25 280,30", fill: "#f3f4f6" },
+                text { x: "300", y: "30", font_size: "16", font_family: "Arial", fill: "#f3f4f6", "faster" }
             }
         }
     }
