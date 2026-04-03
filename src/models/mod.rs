@@ -158,8 +158,8 @@ pub fn default_media_key_map() -> BTreeMap<u8, u16> {
 
 pub fn default_enable_middle_click() -> bool { false }
 
-pub fn default_tp_accel_coeffs() -> TrackPointAccelerationCoeffs {
-    TrackPointAccelerationCoeffs { coeffs: TP_ACCEL_COEFFS.iter().map(|row| row.to_vec()).collect() }
+pub fn default_tp_accel_coeffs() -> TrackPointSpeedSettings {
+    TrackPointSpeedSettings { coeffs: TP_ACCEL_COEFFS.iter().map(|row| row.to_vec()).collect() }
 }
 
 #[derive(Serialize, Deserialize, )]
@@ -223,7 +223,7 @@ pub enum Tab {
 }
 
 #[derive(Clone, PartialEq, Eq, Serialize, Deserialize, Debug)]
-pub struct TrackPointAccelerationCoeffs {
+pub struct TrackPointSpeedSettings {
     /// 9 speed settings, each with 43 tilt levels (0..=42)
     pub coeffs: Vec<Vec<i8>>,
 }
