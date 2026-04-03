@@ -61,11 +61,9 @@ pub fn SelectFnID(
     map_key_label: BTreeMap::<u8, KeyLabel>,
 ) -> Element {
     rsx!{
-        div {
-            class: "min-w-[6rem]",
-            h2 { class: "text-xl py-4 text-center", "Fn / Media trigger" },
+        div { class: "min-w-[6rem]",
             select {
-                class: "w-full px-2 py-1 border border-gray-300 rounded text-gray-700 text-sm",
+                class: "px-2 py-1 border border-gray-300 rounded text-gray-700 text-sm",
                 id: "options",
                 value: fn_id(),
                 onchange: move |evt| {

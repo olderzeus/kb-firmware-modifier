@@ -264,26 +264,23 @@ pub fn MainWindow(
                                     },
                                     models::Tab::KeyMatrix => {rsx!{}},
                                     models::Tab::Others => {
-                                        rsx!{
-                                            SelectFnID {
-                                                general_setting: general_setting.clone(),
-                                                fn_id,
-                                                map_key_label: selected_logical_layout().map_key_label.clone(),
-                                            }
-                                            div { class: "w-full p-6 space-y-6",
-                                                h2 { class: "text-xl text-center flex-wrap",
-                                                    "Enable middle"
-                                                    br {}
-                                                    "button click"
+                                        rsx! {
+                                            div { class: "grid grid-cols-[max-content,max-content] gap-x-6 gap-y-3 items-center",
+                                                label { class: "text-lg", "● Fn / Media trigger:" }
+                                                SelectFnID {
+                                                    general_setting: general_setting.clone(),
+                                                    fn_id,
+                                                    map_key_label: selected_logical_layout().map_key_label.clone(),
                                                 }
-                                                div { class: "flex justify-center",
-                                                    input {
-                                                        r#type: "checkbox",
-                                                        checked: enable_middle_click(),
-                                                        onchange: move |evt| {
-                                                            enable_middle_click.set(evt.checked());
-                                                        },
-                                                    }
+
+                                                label { class: "text-lg", "● Force to disable Thinkpad preferred scrolling:" }
+                                                input {
+                                                    r#type: "checkbox",
+                                                    class: "justify-self-start",
+                                                    checked: enable_middle_click(),
+                                                    onchange: move |evt| {
+                                                        enable_middle_click.set(evt.checked());
+                                                    },
                                                 }
                                             }
                                         }
