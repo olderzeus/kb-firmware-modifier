@@ -132,7 +132,7 @@ pub fn MainWindow(
                         ButtonTab { tabname: "⚙ Macro keys", tabkind: models::Tab::MacroKey, current_tab },
                         ButtonTab { tabname: "⚙ Media keys", tabkind: models::Tab::MediaKey, current_tab },
                         ButtonTab { tabname: "⚙ Trackpoint", tabkind: models::Tab::Trackpoint, current_tab },
-                        ButtonTab { tabname: "⚙ Key matrix", tabkind: models::Tab::KeyMatrix, current_tab }
+                        // ButtonTab { tabname: "⚙ Key matrix", tabkind: models::Tab::KeyMatrix, current_tab }
                         ButtonTab { tabname: "⚙ Other settings", tabkind: models::Tab::Others, current_tab }
                         hr {}
                         ButtonLoad {
