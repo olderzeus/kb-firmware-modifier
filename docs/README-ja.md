@@ -65,21 +65,18 @@
    Speed 1からSpeed 9は、ドライバ設定画面上の9段階の速度設定に対応しています。公式ドライバがインストールされていない環境（macOSなど）ではSpeed 5が使われます。
    ![Trackpoint Settings](https://github.com/haborite/ku1255-firmware-modifier/blob/main/docs/trackpoint-overview.png)
 
-8. **Enable middle button click**  
-   通常、MS Windows上で公式ドライバを使うと中ボタンクリックが無効化されてスクロール専用アイコンになりますが、
-   このチェックボックスをONにすると、中ボタンクリック判定を有効化します（通常のマウスの中ボタンと同じ挙動になる）。
+8. **Others**  
+   - **Fn / Media trigger**: 選択したキーに対して（本来の動作に加えて）Fnキーとしての機能も付与することが出来ます。
+   - Force to disable Thinkpad preffered scrolling
 
-9. **Fn / Media trigger**  
-   選択したキーに対して（本来の動作に加えて）Fnキーとしての機能も付与することが出来ます。
-
-10. **Load config**  
+9. **Load config**  
    `.json` 形式の保存済みキーマップを読み込みます。
 
-11. **Save config**  
+10. **Save config**  
    現在のキーマップを `.json` ファイルとして保存します。
 
 
-12. **Install firmware**  
+11. **Install firmware**  
    現在の設定をキーボードに書き込みます。  
    書き込み前にキーボードが接続されていることを確認してください。  
    書き込み後にキーボードを一度USBから外し、再接続することで設定が反映されます。
@@ -95,6 +92,11 @@
 6. インストールが完了したらインストーラーを閉じます
 7. キーボードをUSBから一度取り外し、再接続すると新しい設定が有効になります
 
+## ♲ ファームウェアのリセット
+- ファームウェアは繰り返し書き込み可能です
+- [Lenovo公式ファームウェアインストーラー](https://support.lenovo.com/jp/ja/solutions/pd026745-thinkpad-compact-usb-keyboard-with-trackpoint-overview-and-service-parts)を実行すると、ファームウェアが出荷時の状態に戻ります。
+
+
 ## 開発
 devlopment guideをご覧ください
 
@@ -107,6 +109,7 @@ https://github.com/haborite/ku1255-firmware-modifier/tree/main/dev#readme
 
 本プロジェクトで採用しているファームウェア解析結果は、以下のスレッドでの議論をもとにしています：  
 - https://github.com/lentinj/tp-compact-keyboard/issues/32
+- https://hohlerde.org/rauch/en/elektronik/projekte/tpkbd-fix
 
 USB HID Usage IDの対応表はこちらを参考にしています：  
 - https://bsakatu.net/doc/usb-hid-to-scancode/

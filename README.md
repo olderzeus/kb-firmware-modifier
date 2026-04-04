@@ -18,7 +18,7 @@ Since all modifications are written directly to the keyboard's firmware, **no sy
 ---
 
 ## 📜 Compatible Models
-**[Lenovo ThinkPad Compact USB Keyboard with TrackPoint (KU-1255)](https://support.lenovo.com/jp/ja/solutions/pd026745-thinkpad-compact-usb-keyboard-with-trackpoint-overview-and-service-parts)**
+**[Lenovo ThinkPad Compact USB Keyboard with TrackPoint (KU-1255)](https://support.lenovo.com/us/en/solutions/pd026745-thinkpad-compact-usb-keyboard-with-trackpoint-overview-and-service-parts)**
 
 **Part Number** : 0B47190, 0B47191, 0B47192, 0B47194, 0B47195, 0B47197, 0B47198, 0B47200, 0B47201, 0B47202, 0B47204, 0B47205, 0B47206, 0B47207, 0B47208, 0B47209, 0B47210, 0B47211, 0B47212, 0B47213, 0B47215, 0B47216, 0B47217, 0B47218, 0B47219, 0B47220, 0B47221, 0B47222, 0B47223, 0B47224, 0B47225
 
@@ -68,13 +68,13 @@ Since all modifications are written directly to the keyboard's firmware, **no sy
 8. **Other settings**
    Other useful settings (e.g. Assign Fn-key functionality in addition to the original behavior of any selected key.)
 
-10. **Load config**  
+9. **Load config**  
    Load a previously saved keymap from a `.json` file.
 
-11. **Save config**  
+10. **Save config**  
    Save the current keymap to a `.json` file.
 
-12. **Install firmware**  
+11. **Install firmware**  
    Flash the current configuration to the keyboard.  
    Make sure the keyboard is plugged in before proceeding.  
    After installation, unplug and reconnect the keyboard to apply the changes.
@@ -89,6 +89,10 @@ Since all modifications are written directly to the keyboard's firmware, **no sy
 5. When the firmware installer launches, click **Start**.
 6. After installation finishes, close the installer.
 7. Unplug and reconnect the keyboard. The new keymap will take effect.
+
+## ♲ Firmware recovery
+- Firmware can be installed into the keyboard repeatedly
+- To restore your device to its factory firmware settings, please use the [Lenovo Official Firmware Installer][Lenovo official firmware installer](https://support.lenovo.com/us/en/solutions/pd026745-thinkpad-compact-usb-keyboard-with-trackpoint-overview-and-service-parts).
 
 ---
 
