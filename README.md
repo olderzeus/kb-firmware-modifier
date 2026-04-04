@@ -90,7 +90,7 @@ Since all modifications are written directly to the keyboard's firmware, **no sy
 6. After installation finishes, close the installer.
 7. Unplug and reconnect the keyboard. The new keymap will take effect.
 
-## ♲ Firmware recovery
+## ♻️ Firmware recovery
 - Firmware can be installed into the keyboard repeatedly
 - To restore your device to its factory firmware settings, please use the [Lenovo Official Firmware Installer][Lenovo official firmware installer](https://support.lenovo.com/us/en/solutions/pd026745-thinkpad-compact-usb-keyboard-with-trackpoint-overview-and-service-parts).
 

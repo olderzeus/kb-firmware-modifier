@@ -92,7 +92,7 @@
 6. インストールが完了したらインストーラーを閉じます
 7. キーボードをUSBから一度取り外し、再接続すると新しい設定が有効になります
 
-## ♲ ファームウェアのリセット
+## ♻️ ファームウェアのリセット
 - ファームウェアは繰り返し書き込み可能です
 - [Lenovo公式ファームウェアインストーラー](https://support.lenovo.com/jp/ja/solutions/pd026745-thinkpad-compact-usb-keyboard-with-trackpoint-overview-and-service-parts)を実行すると、ファームウェアが出荷時の状態に戻ります。
 
