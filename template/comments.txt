@@ -1182,15 +1182,17 @@
 ;; <NOP> <- CURRENTLY NOT USED
 ;; <NOP> <- CURRENTLY NOT USED
 ;; <NOP> <- CURRENTLY NOT USED
-;; <NOP> <- CURRENTLY NOT USED
-;; <NOP> <- CURRENTLY NOT USED
-;; <NOP> <- CURRENTLY NOT USED
-;; <NOP> <- CURRENTLY NOT USED
-;; <NOP> <- CURRENTLY NOT USED
-;; <NOP> <- CURRENTLY NOT USED
-;; <NOP> <- CURRENTLY NOT USED
-;; <NOP> <- CURRENTLY NOT USED
-;; <NOP> <- CURRENTLY NOT USED
+
+
+; if Fnlock is on, skip
+; else set P5.0 Hi (led light off)
+; if Fnlock is on, skip
+; else set P2.7 Hi (led light off)
+; if Fnlock is off, skip
+; else set P5.0 low (led light on)
+; if Fnlock is off, skip
+; else set P2.7 low (led light on)
+; jump back interrupt
 
 
 ;; Load 8-bit mask | ROM-Loading POINT (2) >>>

@@ -4742,39 +4742,47 @@
     },
     {
       "op": "insert",
-      "code": "    NOP                               "
+      "code": ""
     },
     {
       "op": "insert",
-      "code": "    NOP                               "
+      "code": " func_fn_led:"
     },
     {
       "op": "insert",
-      "code": "    NOP                               "
+      "code": "    B0BTS1       0x00.1               "
     },
     {
       "op": "insert",
-      "code": "    NOP                               "
+      "code": "    B0BCLR       P5.0                 "
     },
     {
       "op": "insert",
-      "code": "    NOP                               "
+      "code": "    B0BTS1       0x00.1               "
     },
     {
       "op": "insert",
-      "code": "    NOP                               "
+      "code": "    B0BCLR       P2.7                 "
     },
     {
       "op": "insert",
-      "code": "    NOP                               "
+      "code": "    B0BTS0       0x00.1               "
     },
     {
       "op": "insert",
-      "code": "    NOP                               "
+      "code": "    B0BSET       P5.0                 "
     },
     {
       "op": "insert",
-      "code": "    NOP                               "
+      "code": "    B0BTS0       0x00.1               "
+    },
+    {
+      "op": "insert",
+      "code": "    B0BSET       P2.7                 "
+    },
+    {
+      "op": "insert",
+      "code": "    JMP          _interrupt_003e      "
     },
     {
       "op": "insert",
@@ -13921,8 +13929,8 @@
       "from": 3472
     },
     {
-      "op": "copy",
-      "from": 3473
+      "op": "insert",
+      "code": "    JMP          func_fn_led          "
     },
     {
       "op": "copy",
