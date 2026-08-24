@@ -1053,17 +1053,17 @@
 
 ; if FnLock = 1
 ; (else FnLock = 0)
-; (FnLock = 1) set P5.0 hi
+; (FnLock = 1) set P5.0 low
 ; Skip to Fn_Led_Done
 
-; (FnLock = 0) set P5.0 low
+; (FnLock = 0) set P5.0 hi
 
 ; if CapsLock = 1
 ; (else CapsLock = 0)
-; (CapsLock = 1) set P5.1 hi
+; (CapsLock = 1) set P5.1 low
 ; Skip to Caps_Led_Done
 
-; (CapsLock = 0) set P5.1 low
+; (CapsLock = 0) set P5.1 hi
 
 ; jump back interrupt
 
