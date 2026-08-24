@@ -96,6 +96,11 @@ Since all modifications are written directly to the keyboard's firmware, **no sy
 
 ---
 
+# Append indicator lights
+The firmware supports lighting up the FnLock and CapsLock indicator led lights. The circuit diagram is as follows.
+
+ ![circuit diagram](https://github.com/olderzeus/Thinkpad-KU1255-Customaker/blob/main/docs/ledmod.jpg)
+
 # Development
 See https://github.com/haborite/ku1255-firmware-modifier/tree/main/dev#readme
 
