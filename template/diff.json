@@ -4226,7 +4226,7 @@
     },
     {
       "op": "insert",
-      "code": "    B0BSET       P5.0                 "
+      "code": "    B0BCLR       P5.0                 "
     },
     {
       "op": "insert",
@@ -4238,7 +4238,7 @@
     },
     {
       "op": "insert",
-      "code": "    B0BCLR       P5.0                 "
+      "code": "    B0BSET       P5.0                 "
     },
     {
       "op": "insert",
@@ -4254,7 +4254,7 @@
     },
     {
       "op": "insert",
-      "code": "    B0BSET       P5.1                 "
+      "code": "    B0BCLR       P5.1                 "
     },
     {
       "op": "insert",
@@ -4266,7 +4266,7 @@
     },
     {
       "op": "insert",
-      "code": "    B0BCLR       P5.1                 "
+      "code": "    B0BSET       P5.1                 "
     },
     {
       "op": "insert",
